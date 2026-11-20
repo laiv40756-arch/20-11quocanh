@@ -1,0 +1,3124 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRI ÂN NGƯỜI LÁI ĐÒ – CHÀO MỪNG NGÀY NHÀ GIÁO VIỆT NAM 20/11</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-crimson: #6B0F1A;
+      --color-crimson-light: #961B2B;
+      --color-gold: #D4AF37;
+      --color-gold-bright: #F7DF8B;
+      --color-cream: #FFFDF7;
+      --color-navy: #0A1128;
+      --color-navy-mid: #111D3E;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background-color: var(--color-navy);
+      color: var(--color-cream);
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+    .font-serif-luxury {
+      font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Animated Cinematic Background */
+    .cinematic-bg {
+      background:
+        radial-gradient(circle at 18% 20%, rgba(107, 15, 26, 0.55) 0%, transparent 45%),
+        radial-gradient(circle at 82% 28%, rgba(212, 175, 55, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 50% 82%, rgba(107, 15, 26, 0.45) 0%, transparent 55%),
+        linear-gradient(155deg, var(--color-navy) 0%, var(--color-navy-mid) 45%, #1F0B19 100%);
+      background-attachment: fixed;
+    }
+
+    /* Golden Metallic Text */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF5C3 0%, #D4AF37 35%, #F7DF8B 65%, #B8860B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: goldShimmer 6s ease-in-out infinite;
+    }
+
+    @keyframes goldShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Light Sweep Effect */
+    .light-sweep {
+      position: relative;
+      overflow: hidden;
+    }
+    .light-sweep::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -120%;
+      width: 65%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(247, 223, 139, 0.28) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      animation: sweepAnim 5.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+      pointer-events: none;
+    }
+    @keyframes sweepAnim {
+      0% { left: -120%; }
+      45%, 100% { left: 160%; }
+    }
+
+    /* Golden Halo Pulse */
+    .golden-halo {
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.35), inset 0 0 18px rgba(212, 175, 55, 0.2);
+    }
+
+    /* Luxury Glass Card */
+    .luxury-card {
+      background: linear-gradient(145deg, rgba(17, 29, 62, 0.85), rgba(35, 11, 24, 0.82));
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.6), 0 0 22px rgba(212, 175, 55, 0.08);
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease;
+    }
+    .luxury-card:hover {
+      border-color: rgba(247, 223, 139, 0.72);
+      box-shadow: 0 24px 48px -10px rgba(0, 0, 0, 0.75), 0 0 32px rgba(212, 175, 55, 0.25);
+    }
+
+    /* 3D Perspective Tilt Card */
+    .card-3d-wrap {
+      perspective: 1100px;
+    }
+    .card-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+    }
+    .card-3d-wrap:hover .card-3d {
+      transform: translateY(-8px) rotateX(4deg) rotateY(-4deg);
+    }
+
+    /* Lotus & Sunflower Rotation / Float */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(4deg); }
+    }
+    .animate-float-slow {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+
+    /* Blooming Lotus Animation */
+    @keyframes petalBloom {
+      0% { transform: scale(0.7) rotate(-8deg); opacity: 0.35; }
+      50% { transform: scale(1.06) rotate(2deg); opacity: 1; }
+      100% { transform: scale(1) rotate(0deg); opacity: 0.95; }
+    }
+    .bloom-flower {
+      animation: petalBloom 4.5s ease-in-out infinite alternate;
+    }
+
+    /* Cinematic Slide Transition */
+    .slide-view-active {
+      animation: cinematicSlideIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes cinematicSlideIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.95) translateY(24px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080E20;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #6B0F1A, #D4AF37);
+      border-radius: 4px;
+    }
+
+    /* Strict Read-Only Enforcement when Presentation Mode is Active */
+    body.is-presentation .admin-only-control {
+      display: none !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+    }
+
+    /* Cinematic Marquee & Typewriter Ticker Stream for Wishes */
+    @keyframes marqueeLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .marquee-track-left {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 38s linear infinite;
+    }
+    .marquee-track-right {
+      display: flex;
+      width: max-content;
+      animation: marqueeRight 42s linear infinite;
+    }
+    .marquee-container:hover .marquee-track-left,
+    .marquee-container:hover .marquee-track-right,
+    .marquee-paused .marquee-track-left,
+    .marquee-paused .marquee-track-right {
+      animation-play-state: paused !important;
+    }
+    .typewriter-cursor::after {
+      content: '▋';
+      color: #F7DF8B;
+      margin-left: 3px;
+      animation: blinkCursor 0.85s steps(2, start) infinite;
+    }
+    @keyframes blinkCursor {
+      to { visibility: hidden; }
+    }
+
+    /* Presentation Deck Mode Layout */
+    body.deck-mode-active {
+      overflow: hidden !important;
+      height: 100vh !important;
+    }
+    body.deck-mode-active .journey-section {
+      display: none !important;
+    }
+    body.deck-mode-active .journey-section.active-deck-slide {
+      display: flex !important;
+      min-height: 100vh !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      padding-top: 5rem !important;
+      padding-bottom: 5.5rem !important;
+      align-items: center;
+    }
+  </style>
+</head>
+<body class="cinematic-bg min-h-screen text-[#FFFDF7] selection:bg-[#D4AF37] selection:text-[#0A1128]">
+
+  <!-- PARTICLE & FLOATING PETALS CANVAS -->
+  <canvas id="cinematicCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- TOP NAVIGATION BAR -->
+  <header id="topNavbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-[#0A1128]/85 backdrop-blur-md border-b border-[#D4AF37]/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+      <!-- Brand / Identity -->
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B0F1A] to-[#D4AF37] p-[1.5px] shrink-0 shadow-lg">
+          <div class="w-full h-full rounded-full bg-[#0A1128] flex items-center justify-center text-[#F7DF8B]">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="truncate">
+          <p id="navBadgeSchool" class="text-[11px] uppercase tracking-widest text-[#F7DF8B] font-semibold truncate">THPT CHUYÊN • LỚP 12A1</p>
+          <h1 class="font-serif-luxury text-sm sm:text-base font-bold text-[#FFFDF7] truncate">Tri Ân Người Lái Đò 20/11</h1>
+        </div>
+      </div>
+
+      <!-- Quick Section Jump Links -->
+      <nav class="hidden md:flex items-center gap-1.5 text-xs font-medium text-[#FFFDF7]/80">
+        <button onclick="navigateToSection(0)" class="nav-jump-btn px-3.5 py-1.5 rounded-full hover:text-[#F7DF8B] hover:bg-white/5 transition">1. Bìa Thiệp</button>
+        <button onclick="navigateToSection(1)" class="nav-jump-btn px-3.5 py-1.5 rounded-full hover:text-[#F7DF8B] hover:bg-white/5 transition">2. Thiệp Chúc Mừng 20/11</button>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2">
+        <!-- Read-only Status Badge (Shown only in Presentation Mode) -->
+        <span id="readOnlyStatusBadge" class="hidden items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#6B0F1A]/90 border border-[#D4AF37]/60 text-[#F7DF8B]">
+          <i data-lucide="tv" class="w-3.5 h-3.5"></i>
+          <span>Chế độ Trình chiếu</span>
+        </span>
+
+        <!-- Slide / Scroll Mode Toggle -->
+        <button id="btnToggleDeckMode" onclick="toggleSlideDeckMode()" title="Bật/Tắt chế độ trình chiếu từng trang Slide" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#FFFDF7] transition">
+          <i data-lucide="presentation" class="w-3.5 h-3.5 text-[#F7DF8B]"></i>
+          <span id="deckModeLabel" class="hidden sm:inline">Trình chiếu Slide</span>
+        </button>
+
+        <!-- Music Toggle -->
+        <button id="btnToggleMusic" onclick="toggleBackgroundMusic()" title="Bật/Tắt nhạc nền" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#FFFDF7] transition">
+          <i id="musicIcon" data-lucide="volume-x" class="w-3.5 h-3.5 text-[#F7DF8B]"></i>
+          <span id="musicStatusText" class="hidden md:inline">Nhạc: Tắt</span>
+        </button>
+
+        <!-- Effects Toggle -->
+        <button id="btnToggleFX" onclick="toggleVisualEffects()" title="Bật/Tắt hiệu ứng hoa & bụi vàng" class="p-2 rounded-full bg-white/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#F7DF8B] transition">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        </button>
+
+        <!-- QR Code Generator Button (Admin only) -->
+        <button id="btnOpenQRModal" onclick="openQRModal()" class="admin-only-control flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-[#0A1128] hover:brightness-110 shadow-md transition">
+          <i data-lucide="qr-code" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">TẠO MÃ QR TRÌNH CHIẾU</span>
+        </button>
+
+        <!-- Admin Panel Button (Admin only) -->
+        <button id="btnOpenAdmin" onclick="requestOpenAdminPanel()" class="admin-only-control flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#6B0F1A] hover:bg-[#961B2B] border border-[#D4AF37]/60 text-[#FFFDF7] shadow-md transition">
+          <i data-lucide="settings" class="w-3.5 h-3.5 text-[#F7DF8B]"></i>
+          <span class="hidden sm:inline">QUẢN TRỊ WEBSITE</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN JOURNEY CONTAINER -->
+  <main id="journeyContainer" class="relative z-10 pt-16">
+
+    <!-- ==========================================
+         PHẦN 1 – MÀN HÌNH MỞ ĐẦU (HERO)
+    =========================================== -->
+    <section id="section-hero" data-section-key="hero" class="journey-section active-deck-slide min-h-[calc(100vh-4rem)] flex items-center justify-center relative px-4 py-16 overflow-hidden">
+      <!-- Golden Ambient Spotlight -->
+      <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+        <div class="w-[460px] h-[460px] sm:w-[680px] sm:h-[680px] rounded-full bg-gradient-to-tr from-[#6B0F1A]/40 via-[#D4AF37]/20 to-transparent blur-3xl"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto text-center relative z-10 space-y-8">
+        <!-- Decorative Lotus & Sunflower Emblem -->
+        <div class="inline-flex items-center justify-center gap-4 px-5 py-2 rounded-full bg-[#6B0F1A]/60 border border-[#D4AF37]/50 golden-halo animate-float-slow">
+          <!-- Stylized SVG Lotus Flower -->
+          <svg class="w-7 h-7 text-[#F7DF8B]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 10C27 20 25 30 32 42C39 30 37 20 32 10Z" fill="#F7DF8B" fill-opacity="0.9"/>
+            <path d="M32 42C22 36 16 26 16 16C24 20 29 29 32 42Z" fill="#D4AF37" fill-opacity="0.85"/>
+            <path d="M32 42C42 36 48 26 48 16C40 20 35 29 32 42Z" fill="#D4AF37" fill-opacity="0.85"/>
+            <path d="M32 42C19 42 10 35 6 26C16 26 24 33 32 42Z" fill="#E8998D" fill-opacity="0.75"/>
+            <path d="M32 42C45 42 54 35 58 26C48 26 40 33 32 42Z" fill="#E8998D" fill-opacity="0.75"/>
+            <path d="M18 46C27 49 37 49 46 46" stroke="#F7DF8B" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span id="heroCreditMeta" class="text-xs sm:text-sm uppercase tracking-[0.22em] text-[#F7DF8B] font-semibold">KỶ NIỆM 44 NĂM NGÀY NHÀ GIÁO VIỆT NAM (20/11/1982 – 20/11/2026)</span>
+          <!-- Stylized SVG Sunflower -->
+          <svg class="w-7 h-7 text-[#F7DF8B]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="10" fill="#6B0F1A" stroke="#F7DF8B" stroke-width="2"/>
+            <path d="M32 8L36 18H28L32 8ZM32 56L28 46H36L32 56ZM8 32L18 28V36L8 32ZM56 32L46 36V28L56 32ZM15 15L24 20L20 24L15 15ZM49 49L40 44L44 40L49 49ZM49 15L44 24L40 20L49 15ZM15 49L20 40L24 44L15 49Z" fill="#F7DF8B"/>
+          </svg>
+        </div>
+
+        <!-- Main Cinematic Title -->
+        <div class="space-y-4">
+          <h2 id="heroMainTitle" class="font-serif-luxury text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight gold-gradient-text drop-shadow-[0_6px_25px_rgba(212,175,55,0.35)]">
+            CHÀO MỪNG NGÀY NHÀ GIÁO VIỆT NAM 20/11
+          </h2>
+          <div class="w-36 h-1 mx-auto bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
+          <p id="heroSubTitle" class="text-base sm:text-xl md:text-2xl text-[#FFFDF7]/90 font-light italic max-w-3xl mx-auto leading-relaxed">
+            "Tri ân những người đã dành cả cuộc đời để gieo mầm tri thức"
+          </p>
+        </div>
+
+        <!-- Class & School Honour Banner -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-3 px-6 py-3 rounded-2xl bg-white/5 border border-[#D4AF37]/30 backdrop-blur-sm text-xs sm:text-sm text-[#FFFDF7]/90">
+          <span class="flex items-center gap-1.5"><i data-lucide="school" class="w-4 h-4 text-[#F7DF8B]"></i> <strong id="displaySchoolName">Trường THPT Chuyên</strong></span>
+          <span class="text-[#D4AF37]">•</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="users" class="w-4 h-4 text-[#F7DF8B]"></i> <strong id="displayClassName">Tập thể Lớp 12A1</strong></span>
+          <span class="text-[#D4AF37]">•</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="user-check" class="w-4 h-4 text-[#F7DF8B]"></i> Thực hiện: <strong id="displayAuthorName">Ban Truyền Thông 12A1</strong></span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <button onclick="startGratitudeJourney()" class="light-sweep group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#6B0F1A] via-[#961B2B] to-[#6B0F1A] border-2 border-[#D4AF37] text-[#FFFDF7] font-semibold text-sm sm:text-base tracking-wider uppercase shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 transition duration-300">
+            <span id="heroCtaButtonLabel">MỞ THIỆP CHÚC MỪNG 20/11</span>
+            <i data-lucide="arrow-down-circle" class="w-5 h-5 text-[#F7DF8B] group-hover:translate-y-0.5 transition"></i>
+          </button>
+
+          <button onclick="enterFullscreenPresentation()" class="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#111D3E]/90 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/50 text-[#F7DF8B] font-medium text-sm transition">
+            <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            <span>Trình chiếu Toàn màn hình</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden legacy story elements so IDs remain safe -->
+    <div id="section-story" class="hidden">
+      <h2 id="storySectionTitle"></h2>
+      <p id="storySectionIntro"></p>
+      <div id="storyChaptersGrid"></div>
+    </div>
+
+    <!-- ==========================================
+         THIỆP CHÚC MỪNG 20/11 DUY NHẤT (CHẠY TỪNG CHỮ)
+    =========================================== -->
+    <section id="section-wishes" data-section-key="wishes" class="journey-section min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div class="max-w-3xl w-full mx-auto space-y-6">
+
+        <!-- Tấm Thiệp 20/11 Duy Nhất Sang Trọng, Tối Giản -->
+        <div class="relative rounded-[32px] p-[2px] bg-gradient-to-br from-[#FFF5C3] via-[#D4AF37] to-[#6B0F1A] shadow-[0_25px_70px_rgba(0,0,0,0.8)]">
+          <div class="rounded-[30px] bg-gradient-to-b from-[#131F42] via-[#1C0E24] to-[#0A1128] px-6 py-10 sm:px-14 sm:py-14 text-center relative overflow-hidden space-y-8">
+
+            <!-- Hoa sen vàng nở trên đỉnh thiệp -->
+            <div class="flex flex-col items-center justify-center space-y-3">
+              <div class="bloom-flower w-16 h-16 rounded-full bg-gradient-to-b from-[#6B0F1A] to-[#0A1128] border border-[#D4AF37] flex items-center justify-center golden-halo">
+                <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 14C42 30 38 48 50 70C62 48 58 30 50 14Z" fill="#F7DF8B"/>
+                  <path d="M50 70C34 60 22 44 22 25C35 32 45 48 50 70Z" fill="#D4AF37" fill-opacity="0.9"/>
+                  <path d="M50 70C66 60 78 44 78 25C65 32 55 48 50 70Z" fill="#D4AF37" fill-opacity="0.9"/>
+                  <path d="M50 70C28 70 14 58 8 42C24 43 38 55 50 70Z" fill="#E5989B" fill-opacity="0.85"/>
+                  <path d="M50 70C72 70 86 58 92 42C76 43 62 55 50 70Z" fill="#E5989B" fill-opacity="0.85"/>
+                  <path d="M24 77C40 82 60 82 76 77" stroke="#F7DF8B" stroke-width="3.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span id="cardHeaderBadgeText" class="text-[11px] uppercase tracking-[0.28em] text-[#F7DF8B]/90 font-semibold">✦ THIỆP TRI ÂN NGÀY NHÀ GIÁO VIỆT NAM 20/11 ✦</span>
+            </div>
+
+            <!-- Dòng Kính tặng trên đầu thiệp -->
+            <div>
+              <span id="wishSpotlightRecipient" class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#6B0F1A]/90 border border-[#D4AF37]/70 text-xs sm:text-sm font-semibold text-[#F7DF8B] shadow-md">
+                Kính tặng Quý Thầy Cô
+              </span>
+            </div>
+
+            <!-- Nội dung lời chúc chạy từng chữ trực tiếp -->
+            <div class="min-h-[180px] sm:min-h-[195px] flex flex-col items-center justify-center space-y-5 px-2">
+              <h2 id="wishSpotlightQuote" class="font-serif-luxury text-2xl sm:text-4xl font-bold gold-gradient-text leading-relaxed typewriter-cursor"></h2>
+              <div class="w-24 h-[1.5px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
+              <p id="wishSpotlightMessage" class="text-base sm:text-xl text-[#FFFDF7]/95 font-light italic leading-relaxed max-w-2xl mx-auto"></p>
+            </div>
+
+            <!-- Chữ ký người gửi góc dưới thiệp -->
+            <div class="pt-5 border-t border-[#D4AF37]/25 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-sm text-[#F7DF8B]">
+              <span id="wishSpotlightSender" class="font-serif-luxury italic text-base sm:text-lg text-[#F7DF8B]"></span>
+              <span id="footerAttribution" class="text-xs text-[#FFFDF7]/70">Tập thể Lớp 12A1 – Trường THPT Chuyên</span>
+            </div>
+
+            <!-- Nút tương tác gọn nhẹ trên tấm thiệp -->
+            <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+              <button onclick="triggerEndingCelebration()" class="light-sweep inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-[#0A1128] font-bold text-xs sm:text-sm shadow-[0_0_25px_rgba(212,175,55,0.45)] hover:scale-105 transition">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>Tung Hoa Chúc Mừng 20/11</span>
+              </button>
+
+              <button onclick="runWishSpotlightTypewriter(0)" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/10 hover:bg-[#D4AF37]/25 border border-[#D4AF37]/40 text-xs font-medium text-[#F7DF8B] transition">
+                <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                <span>Chạy lại chữ</span>
+              </button>
+
+              <button onclick="requestOpenAdminTab('general')" class="admin-only-control inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#6B0F1A] hover:bg-[#961B2B] border border-[#D4AF37]/50 text-xs font-semibold text-[#F7DF8B] transition">
+                <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+                <span>Sửa Lời Chúc Trên Thiệp</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Hidden legacy elements to preserve DOM IDs without displaying Album/Video/Multi-cards -->
+        <div class="hidden">
+          <span id="wishSpotlightCounter"></span>
+          <span id="wishSpotlightEffect"></span>
+          <span id="wishesPauseLabel"></span>
+          <span id="wishesLayoutLabel"></span>
+          <div id="wishesMarqueeWrapper"><div id="wishesMarqueeTrack1"></div><div id="wishesMarqueeTrack2"></div></div>
+          <div id="wishesGrid"></div>
+          <div id="section-album"><div id="albumGrid"></div><span id="albumAutoplayText"></span></div>
+          <div id="section-video">
+            <div id="videoStageWrapper">
+              <canvas id="tributeVideoCanvas"></canvas>
+              <video id="customHtml5Video"></video>
+              <iframe id="customYoutubeIframe"></iframe>
+              <div id="videoCenterOverlay"></div>
+            </div>
+            <span id="videoPlayText"></span>
+            <span id="videoCaptionBadge"></span>
+          </div>
+          <div id="section-ending">
+            <blockquote id="endingQuoteTypewriter"></blockquote>
+            <p id="endingMessageTypewriter"></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       PRESENTATION DECK FLOATING CONTROL BAR
+  =========================================== -->
+  <div id="presentationControlBar" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 sm:gap-3 px-4 py-2.5 rounded-full bg-[#0A1128]/90 backdrop-blur-xl border border-[#D4AF37]/50 shadow-[0_10px_35px_rgba(0,0,0,0.75)]">
+    <button onclick="stepSlide(-1)" title="Trang trước (Phím mũi tên trái)" class="p-2 rounded-full bg-white/10 hover:bg-[#D4AF37]/25 text-[#F7DF8B] transition">
+      <i data-lucide="chevron-left" class="w-4 h-4"></i>
+    </button>
+
+    <div class="px-2 text-center">
+      <span id="slideCounterBadge" class="text-xs font-semibold text-[#F7DF8B] tracking-wider">PHẦN 1 / 2</span>
+    </div>
+
+    <button onclick="stepSlide(1)" title="Trang tiếp theo (Phím mũi tên phải)" class="p-2 rounded-full bg-white/10 hover:bg-[#D4AF37]/25 text-[#F7DF8B] transition">
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+    </button>
+
+    <div class="h-4 w-[1px] bg-[#D4AF37]/30"></div>
+
+    <button id="btnAutoSlideShow" onclick="toggleAutoSlideShow()" title="Trình chiếu tự động chuyển phần" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#6B0F1A] hover:bg-[#961B2B] border border-[#D4AF37]/50 text-xs font-semibold text-[#FFFDF7] transition">
+      <i id="autoSlideIcon" data-lucide="play" class="w-3.5 h-3.5 text-[#F7DF8B]"></i>
+      <span id="autoSlideLabel">Tự động chạy</span>
+    </button>
+
+    <button onclick="enterFullscreenPresentation()" title="Toàn màn hình (ESC để thoát)" class="p-2 rounded-full bg-white/10 hover:bg-[#D4AF37]/25 text-[#F7DF8B] transition">
+      <i data-lucide="maximize-2" class="w-4 h-4"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================
+       LIGHTBOX MODAL (PHÓNG TO HÌNH ẢNH ALBUM)
+  =========================================== -->
+  <div id="albumLightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full luxury-card rounded-3xl overflow-hidden border-2 border-[#D4AF37]/60">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-[#D4AF37]/25 bg-[#0A1128]/80">
+        <div>
+          <span id="lightboxTag" class="text-[11px] uppercase tracking-widest text-[#F7DF8B] font-semibold">KỶ NIỆM 20/11</span>
+          <h3 id="lightboxTitle" class="font-serif-luxury text-lg sm:text-xl font-bold text-[#FFFDF7]">Tiêu đề bức ảnh</h3>
+        </div>
+        <button onclick="closeAlbumLightbox()" class="p-2 rounded-full bg-white/10 hover:bg-[#6B0F1A] text-[#FFFDF7] transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="relative bg-[#050914] flex items-center justify-center max-h-[68vh] overflow-hidden">
+        <img id="lightboxImg" src="" alt="Kỷ niệm 20/11" class="max-h-[68vh] w-auto object-contain" />
+        <button onclick="stepLightboxImage(-1)" class="absolute left-3 p-3 rounded-full bg-black/60 hover:bg-[#6B0F1A] border border-[#D4AF37]/50 text-[#F7DF8B] transition">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <button onclick="stepLightboxImage(1)" class="absolute right-3 p-3 rounded-full bg-black/60 hover:bg-[#6B0F1A] border border-[#D4AF37]/50 text-[#F7DF8B] transition">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="px-6 py-4 bg-[#0A1128]/90 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <p id="lightboxCaption" class="text-sm text-[#FFFDF7]/90 italic"></p>
+        <span id="lightboxIndexBadge" class="text-xs font-semibold text-[#F7DF8B] shrink-0">1 / 6</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL ĐĂNG NHẬP XÁC THỰC QUẢN TRỊ (SHA-256)
+  =========================================== -->
+  <div id="adminAuthModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="max-w-md w-full luxury-card rounded-3xl p-6 sm:p-8 border-2 border-[#D4AF37]/60 space-y-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-[#6B0F1A] border border-[#D4AF37] flex items-center justify-center text-[#F7DF8B]">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-serif-luxury text-xl font-bold text-[#F7DF8B]">Xác Thực Quản Trị Website</h3>
+            <p class="text-xs text-[#FFFDF7]/70">Bảo vệ bằng mã băm SHA-256 (Web Crypto API)</p>
+          </div>
+        </div>
+        <button onclick="closeAdminAuthModal()" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-[#FFFDF7]">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4">
+        <div class="p-3.5 rounded-2xl bg-[#0A1128]/80 border border-[#D4AF37]/30 text-xs text-[#FFFDF7]/85 space-y-1.5">
+          <p class="font-semibold text-[#F7DF8B] flex items-center gap-1.5">
+            <i data-lucide="key-round" class="w-3.5 h-3.5"></i>
+            <span>Hướng dẫn xác thực quản trị:</span>
+          </p>
+          <p>Nhập mật khẩu quản trị mặc định: <code class="px-1.5 py-0.5 rounded bg-white/15 text-[#F7DF8B] font-bold">20112026</code> (hoặc <code class="px-1.5 py-0.5 rounded bg-white/15 text-[#F7DF8B] font-bold">2011</code> / <code class="px-1.5 py-0.5 rounded bg-white/15 text-[#F7DF8B] font-bold">admin</code>), hoặc nhấn nút mở nhanh bên dưới:</p>
+          <div class="pt-1.5 flex flex-wrap gap-2">
+            <button type="button" onclick="quickFillAndLoginAdmin('20112026')" class="px-3 py-1.5 rounded-lg bg-[#6B0F1A] hover:bg-[#961B2B] border border-[#D4AF37] text-[#F7DF8B] font-semibold text-xs transition">
+              ⚡ Điền nhanh 20112026 &amp; Mở Quản Trị
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-[#F7DF8B] mb-2">Nhập mật khẩu quản trị</label>
+          <input id="adminPasswordInput" type="password" placeholder="Nhập mã khóa quản trị..." onkeydown="if(event.key==='Enter') verifyAdminPassword()" class="w-full px-4 py-3 rounded-xl bg-[#0A1128] border border-[#D4AF37]/40 text-sm text-[#FFFDF7] focus:outline-none focus:border-[#F7DF8B]" />
+          <p id="adminAuthError" class="hidden text-xs text-red-400 mt-2">Mật khẩu chưa chính xác. Vui lòng kiểm tra lại!</p>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button onclick="closeAdminAuthModal()" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-medium">Hủy</button>
+          <button onclick="verifyAdminPassword()" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-[#0A1128] text-xs font-bold hover:brightness-110 transition">
+            Mở Bảng Quản Trị
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HỆ THỐNG QUẢN TRỊ WEBSITE (CMS MODAL)
+  =========================================== -->
+  <div id="adminPanelModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6">
+    <div class="max-w-5xl w-full h-[90vh] luxury-card rounded-3xl border-2 border-[#D4AF37]/70 flex flex-col overflow-hidden">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-[#0A1128] border-b border-[#D4AF37]/30 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#6B0F1A] to-[#D4AF37] flex items-center justify-center text-[#0A1128] font-bold">
+            <i data-lucide="Sliders" class="w-5 h-5 text-[#FFFDF7]"></i>
+          </div>
+          <div>
+            <h3 class="font-serif-luxury text-lg sm:text-xl font-bold text-[#F7DF8B]">HỆ THỐNG QUẢN TRỊ & XUẤT BẢN WEBSITE 20/11</h3>
+            <p id="publishStatusHeader" class="text-xs text-emerald-400">Trạng thái: Đã xuất bản phiên bản mới nhất</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="previewWebsiteFromAdmin()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-[#D4AF37]/40 text-xs font-medium text-[#FFFDF7] transition">
+            <i data-lucide="eye" class="w-3.5 h-3.5 text-[#F7DF8B]"></i>
+            <span>Xem trước</span>
+          </button>
+          <button onclick="publishNewVersion()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-[#0A1128] text-xs font-bold hover:brightness-110 transition">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+            <span>Lưu & Xuất Bản Phiên Bản Mới</span>
+          </button>
+          <button onclick="closeAdminPanel()" class="p-2 rounded-full bg-white/10 hover:bg-[#6B0F1A] text-[#FFFDF7] transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Navigation Tabs -->
+      <div class="px-6 py-2.5 bg-[#0D1632] border-b border-[#D4AF37]/20 flex items-center gap-2 overflow-x-auto text-xs font-semibold">
+        <button onclick="switchAdminTab('general')" data-admin-tab="general" class="admin-tab-btn px-3.5 py-2 rounded-xl bg-[#6B0F1A] text-[#F7DF8B] border border-[#D4AF37]/50 shrink-0">1. Nội Dung Thiệp & Trường Lớp</button>
+        <button onclick="switchAdminTab('theme')" data-admin-tab="theme" class="admin-tab-btn px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-[#FFFDF7]/80 shrink-0">2. Màu Sắc & Nhạc Nền</button>
+        <button onclick="switchAdminTab('deploy')" data-admin-tab="deploy" class="admin-tab-btn px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-[#FFFDF7]/80 shrink-0">3. Đưa Lên Internet & Bảo Mật</button>
+      </div>
+
+      <!-- Admin Tab Content Body -->
+      <div class="flex-1 overflow-y-auto p-6 space-y-6 bg-[#0A1128]/70">
+
+        <!-- TAB 1: CHỈNH SỬA TOÀN DIỆN BÌA & TẤM THIỆP 20/11 -->
+        <div id="adminTab-general" class="admin-tab-pane space-y-6">
+          <!-- Khối 1: Chỉnh sửa Màn Hình Bìa Mở Đầu -->
+          <div class="p-4 rounded-2xl bg-[#111D3E]/70 border border-[#D4AF37]/35 space-y-4">
+            <h4 class="text-sm font-bold text-[#F7DF8B] flex items-center gap-2">
+              <i data-lucide="layout" class="w-4 h-4"></i>
+              <span>A. Chỉnh sửa Màn Hình Bìa Mở Đầu &amp; Thông Tin Trường Lớp</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">1. Dòng huy hiệu kỷ niệm trên cùng</label>
+                <input id="inputHeroBadge" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">2. Chữ trên nút bấm mở thiệp</label>
+                <input id="inputHeroCtaText" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">3. Tiêu đề lớn trang bìa</label>
+                <input id="inputHeroTitle" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">4. Câu trích dẫn phụ dưới tiêu đề bìa</label>
+                <input id="inputHeroSubtitle" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">5. Tên Trường</label>
+                <input id="inputSchoolName" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">6. Tên Lớp / Tập thể</label>
+                <input id="inputClassName" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div class="md:col-span-2">
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">7. Tên Người / Nhóm thực hiện</label>
+                <input id="inputAuthorName" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Khối 2: Chỉnh sửa Toàn Diện Tấm Thiệp Chúc Mừng 20/11 Chạy Chữ -->
+          <div class="p-4 rounded-2xl bg-[#111D3E]/70 border border-[#D4AF37]/35 space-y-4">
+            <h4 class="text-sm font-bold text-[#F7DF8B] flex items-center gap-2">
+              <i data-lucide="mail-open" class="w-4 h-4"></i>
+              <span>B. Chỉnh sửa Toàn Diện Nội Dung Tấm Thiệp Chúc Mừng 20/11 (Chạy Chữ)</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">1. Tiêu đề nhỏ trên đỉnh thiệp</label>
+                <input id="inputCardHeaderBadge" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">2. Dòng Kính tặng (Người nhận thiệp)</label>
+                <input id="inputCardRecipient" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">3. Chữ ký người gửi dưới đáy thiệp</label>
+                <input id="inputCardSenderSign" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">4. Câu danh ngôn / Lời tri ân chính (Chạy chữ dòng 1 - Vàng ánh kim)</label>
+                <textarea id="inputEndingQuote" rows="3" class="w-full px-3.5 py-2.5 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]"></textarea>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">5. Lời chúc chi tiết gửi thầy cô (Chạy chữ dòng 2)</label>
+                <textarea id="inputEndingMessage" rows="3" class="w-full px-3.5 py-2.5 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]"></textarea>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center pt-1">
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">6. Tốc độ chạy từng chữ trên thiệp</label>
+                <select id="inputTypingSpeed" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]">
+                  <option value="18">Nhanh &amp; Mượt (18ms / ký tự)</option>
+                  <option value="28" selected>Chuẩn Điện Ảnh (28ms / ký tự)</option>
+                  <option value="45">Chậm Trang Trọng (45ms / ký tự)</option>
+                  <option value="0">Hiển thị ngay toàn bộ (Không gõ từng chữ)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">7. Dòng ghi chú góc phải dưới thiệp</label>
+                <input id="inputCardFooterNote" type="text" class="w-full px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden legacy inputs to avoid null references -->
+          <div class="hidden">
+            <input id="inputStoryTitle" type="text" />
+            <textarea id="inputStoryIntro"></textarea>
+          </div>
+        </div>
+
+        <!-- TAB 2: WISHES MANAGEMENT -->
+        <div id="adminTab-wishes" class="admin-tab-pane hidden space-y-5">
+          <div class="p-4 rounded-2xl bg-[#111D3E]/70 border border-[#D4AF37]/30 space-y-3">
+            <h4 class="text-sm font-bold text-[#F7DF8B]">Thêm Tấm Thiệp Tri Ân Mới</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <input id="newWishSender" type="text" placeholder="Người gửi (VD: Tập thể lớp 12A1)" class="px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              <input id="newWishRecipient" type="text" placeholder="Kính tặng (VD: Cô giáo Chủ nhiệm)" class="px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              <select id="newWishEffect" class="px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#F7DF8B]">
+                <option value="Hiệu ứng Ánh Vàng Lan Tỏa">Hiệu ứng Ánh Vàng Lan Tỏa</option>
+                <option value="Hiệu ứng Lật Thiệp 3D">Hiệu ứng Lật Thiệp 3D</option>
+                <option value="Hiệu ứng Hoa Sen Nở">Hiệu ứng Hoa Sen Nở</option>
+                <option value="Hiệu ứng Sao Khuê Tỏa Sáng">Hiệu ứng Sao Khuê Tỏa Sáng</option>
+              </select>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input id="newWishContent" type="text" placeholder="Nhập lời chúc tri ân sâu sắc dành tặng thầy cô..." class="flex-1 px-3.5 py-2.5 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              <button onclick="addNewWishCard()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-[#0A1128] text-xs font-bold shrink-0">
+                + Thêm Thiệp
+              </button>
+            </div>
+          </div>
+
+          <div id="adminWishesList" class="space-y-3">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- TAB 3: ALBUM MANAGEMENT -->
+        <div id="adminTab-album" class="admin-tab-pane hidden space-y-5">
+          <div class="p-4 rounded-2xl bg-[#111D3E]/70 border border-[#D4AF37]/30 space-y-3">
+            <h4 class="text-sm font-bold text-[#F7DF8B]">Thêm Hình Ảnh Kỷ Niệm Mới</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input id="newPhotoTitle" type="text" placeholder="Tiêu đề bức ảnh (VD: Giờ học đáng nhớ)" class="px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              <input id="newPhotoCaption" type="text" placeholder="Chú thích kỷ niệm cho bức ảnh..." class="px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+            </div>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <input id="newPhotoUrl" type="text" placeholder="Dán đường dẫn ảnh (https://...) hoặc tải ảnh từ máy bên cạnh" class="flex-1 px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              <label class="cursor-pointer inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-[#D4AF37]/40 text-xs text-[#F7DF8B]">
+                <i data-lucide="upload-cloud" class="w-4 h-4"></i>
+                <span>Chọn ảnh từ máy</span>
+                <input type="file" accept="image/*" class="hidden" onchange="handleAdminImageFileSelect(event)" />
+              </label>
+              <button onclick="addNewAlbumPhoto()" class="px-5 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-[#0A1128] text-xs font-bold">
+                + Thêm vào Album
+              </button>
+            </div>
+          </div>
+
+          <div id="adminAlbumList" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- TAB 4: VIDEO MANAGEMENT -->
+        <div id="adminTab-video" class="admin-tab-pane hidden space-y-5">
+          <div class="p-4 rounded-2xl bg-[#111D3E]/70 border border-[#D4AF37]/30 space-y-4">
+            <h4 class="text-sm font-bold text-[#F7DF8B]">Cấu Hình Nguồn Video Tri Ân (Phần 5)</h4>
+            <p class="text-xs text-[#FFFDF7]/75">Bạn có thể chọn chế độ Phim Đồ Họa Điện Ảnh 20/11 tích hợp sẵn, dán đường dẫn video MP4/YouTube hoặc tải tệp video trực tiếp từ thiết bị.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">Chế độ nguồn phát</label>
+                <select id="inputVideoMode" onchange="handleVideoModeSelectChange()" class="w-full px-3.5 py-2.5 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]">
+                  <option value="cinematic_canvas">Phim Đồ Họa Điện Ảnh 20/11 Tích Hợp Sẵn (Khuyên dùng)</option>
+                  <option value="mp4_url">Đường dẫn tệp Video MP4 trực tiếp (.mp4)</option>
+                  <option value="youtube_url">Đường dẫn YouTube (Watch / Embed URL)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">Chú thích hiển thị dưới Video</label>
+                <input id="inputVideoCaption" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">Đường dẫn Video (MP4 hoặc YouTube URL)</label>
+              <input id="inputVideoUrl" type="text" placeholder="https://..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: THEME, MUSIC, BACKGROUND & SECTION ORDER -->
+        <div id="adminTab-theme" class="admin-tab-pane hidden space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Color Palette & Background Customization -->
+            <div class="p-4 rounded-2xl bg-[#111D3E]/70 border border-[#D4AF37]/30 space-y-4">
+              <h4 class="text-sm font-bold text-[#F7DF8B]">Màu Sắc Chủ Đạo & Hình Nền</h4>
+              <div class="grid grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-[11px] text-[#FFFDF7]/80 mb-1">Đỏ Đô Trang Trọng</label>
+                  <input id="inputColorCrimson" type="color" value="#6B0F1A" class="w-full h-10 rounded-lg cursor-pointer bg-transparent" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-[#FFFDF7]/80 mb-1">Vàng Ánh Kim</label>
+                  <input id="inputColorGold" type="color" value="#D4AF37" class="w-full h-10 rounded-lg cursor-pointer bg-transparent" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-[#FFFDF7]/80 mb-1">Xanh Navy Sâu</label>
+                  <input id="inputColorNavy" type="color" value="#0A1128" class="w-full h-10 rounded-lg cursor-pointer bg-transparent" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">Hình nền tùy chỉnh (Đường dẫn ảnh nền hoặc để trống dùng nền điện ảnh)</label>
+                <input id="inputCustomBgUrl" type="text" placeholder="https://... (Để trống để dùng nền Gradient Điện Ảnh)" class="w-full px-3 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <button onclick="applyThemePreset('#6B0F1A','#D4AF37','#0A1128')" class="px-3 py-1.5 rounded-lg bg-[#6B0F1A] border border-[#D4AF37] text-[11px]">Mặc định (Đỏ đô - Vàng kim - Navy)</button>
+                <button onclick="applyThemePreset('#4A154B','#F4C430','#0B0920')" class="px-3 py-1.5 rounded-lg bg-[#4A154B] border border-[#F4C430] text-[11px]">Hoàng Gia (Tím trầm - Vàng nghệ)</button>
+                <button onclick="applyThemePreset('#134E4A','#FBBF24','#042F2E')" class="px-3 py-1.5 rounded-lg bg-[#134E4A] border border-[#FBBF24] text-[11px]">Ngọc Lục Bảo & Vàng Kim</button>
+              </div>
+            </div>
+
+            <!-- Section Ordering & Effects -->
+            <div class="p-4 rounded-2xl bg-[#111D3E]/70 border border-[#D4AF37]/30 space-y-4">
+              <h4 class="text-sm font-bold text-[#F7DF8B]">Sắp Xếp Bố Cục Các Phần & Hiệu Ứng</h4>
+              <p class="text-xs text-[#FFFDF7]/75">Di chuyển thứ tự xuất hiện của các phần trong hành trình tri ân:</p>
+              <div id="adminSectionOrderList" class="space-y-2">
+                <!-- Rendered by JS -->
+              </div>
+              <div class="pt-2 flex flex-wrap items-center gap-4 border-t border-[#D4AF37]/20">
+                <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+                  <input id="chkEnableParticles" type="checkbox" checked onchange="toggleVisualEffects(this.checked)" class="accent-[#D4AF37]" />
+                  <span>Hiệu ứng hoa bay & bụi vàng</span>
+                </label>
+                <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+                  <input id="chkEnableMusic" type="checkbox" onchange="toggleBackgroundMusic()" class="accent-[#D4AF37]" />
+                  <span>Bật nhạc nền Piano tri ân</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backup / Restore JSON -->
+          <div class="p-4 rounded-2xl bg-[#060B19] border border-[#D4AF37]/30 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h5 class="text-xs font-bold text-[#F7DF8B]">Sao Lưu & Khôi Phục Dữ Liệu</h5>
+              <p class="text-[11px] text-[#FFFDF7]/70">Xuất toàn bộ cấu hình ra tệp JSON hoặc khôi phục lại bản gốc mặc định.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="exportDataAsJson()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs text-[#F7DF8B]">Tải file JSON sao lưu</button>
+              <button onclick="resetToDefaultContent()" class="px-3.5 py-2 rounded-xl bg-red-950/80 hover:bg-red-900 border border-red-500/40 text-xs text-red-200">Khôi phục mặc định</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: DEPLOYMENT GUIDE, CLOUD SYNC & PASSWORD -->
+        <div id="adminTab-deploy" class="admin-tab-pane hidden space-y-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <!-- Internet Hosting Guide -->
+            <div class="p-5 rounded-2xl bg-[#111D3E]/75 border border-[#D4AF37]/40 space-y-3">
+              <h4 class="text-sm font-bold text-[#F7DF8B] flex items-center gap-2">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+                <span>Hướng Dẫn Đưa Website Lên Internet Để Quét QR</span>
+              </h4>
+              <ol class="text-xs text-[#FFFDF7]/85 space-y-2 list-decimal list-inside leading-relaxed">
+                <li><strong>Cách 1 – GitHub Pages / Netlify Drop (Miễn phí, 30 giây):</strong> Truy cập <code class="text-[#F7DF8B]">app.netlify.com/drop</code> hoặc tạo kho lưu trữ GitHub Pages, kéo thả file <code class="text-[#F7DF8B]">index.html</code> vào. Bạn sẽ nhận được đường dẫn công khai dạng <code class="text-[#F7DF8B]">https://tri-an-20-11.netlify.app</code>.</li>
+                <li><strong>Cách 2 – Chia sẻ tức thì không cần máy chủ (Gói dữ liệu vào URL):</strong> Sau khi nhấn <em>"Lưu & Xuất Bản"</em>, hệ thống tự động nén dữ liệu tiêu đề, lời chúc, màu sắc vào tham số <code class="text-[#F7DF8B]">?mode=presentation&amp;data=...</code> trong mã QR để điện thoại khác quét là thấy ngay nội dung bạn vừa sửa!</li>
+                <li><strong>Cách 3 – Đồng bộ ảnh/video dung lượng lớn qua Firebase / Supabase:</strong> Nếu tải lên nhiều ảnh gốc độ phân giải cao, hãy tạo bảng <code class="text-[#F7DF8B]">publications</code> trên Supabase hoặc Firebase Realtime Database (chế độ RLS: cho phép <code class="text-[#F7DF8B]">SELECT</code> công khai cho <code class="text-[#F7DF8B]">?mode=presentation</code>, chỉ cho phép <code class="text-[#F7DF8B]">INSERT/UPDATE</code> khi có JWT Admin Token).</li>
+              </ol>
+            </div>
+
+            <!-- Security Architecture & Change Admin Password Hash -->
+            <div class="p-5 rounded-2xl bg-[#111D3E]/75 border border-[#D4AF37]/40 space-y-4">
+              <h4 class="text-sm font-bold text-[#F7DF8B] flex items-center gap-2">
+                <i data-lucide="lock" class="w-4 h-4"></i>
+                <span>Đổi Mật Khẩu Quản Trị & Phân Quyền Máy Chủ</span>
+              </h4>
+              <p class="text-xs text-[#FFFDF7]/80 leading-relaxed">
+                Lưu ý bảo mật: Với kiến trúc 1 file HTML tĩnh chạy độc lập trên trình duyệt, việc khóa giao diện bằng <code class="text-[#F7DF8B]">?mode=presentation</code> và băm mật khẩu SHA-256 giúp ngăn người xem thông thường chỉnh sửa, nhưng không thay thế hoàn toàn xác thực phía máy chủ (Server-side Auth). Khi triển khai thực tế với cơ sở dữ liệu chung, cần bật phân quyền API ở máy chủ.
+              </p>
+              <div class="space-y-2 pt-1">
+                <label class="block text-xs font-semibold text-[#F7DF8B]">Đặt mật khẩu quản trị mới (Sẽ lưu dưới dạng mã băm SHA-256)</label>
+                <div class="flex gap-2">
+                  <input id="newAdminPassInput" type="password" placeholder="Nhập mật khẩu mới..." class="flex-1 px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+                  <button onclick="updateAdminPasswordHash()" class="px-4 py-2 rounded-xl bg-[#6B0F1A] hover:bg-[#961B2B] border border-[#D4AF37]/50 text-xs font-semibold text-[#F7DF8B]">
+                    Cập nhật mã băm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HỆ THỐNG MÃ QR TRÌNH CHIẾU (QR MODAL)
+  =========================================== -->
+  <div id="qrSystemModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="max-w-3xl w-full luxury-card rounded-3xl border-2 border-[#D4AF37]/75 overflow-hidden">
+      <!-- Header -->
+      <div class="px-6 py-4 bg-[#0A1128] border-b border-[#D4AF37]/30 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#B8860B] flex items-center justify-center text-[#0A1128]">
+            <i data-lucide="qr-code" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-serif-luxury text-lg sm:text-xl font-bold text-[#F7DF8B]">HỆ THỐNG MÃ QR TRÌNH CHIẾU 20/11</h3>
+            <p class="text-xs text-[#FFFDF7]/75">Quét bằng camera điện thoại để xem ở chế độ Trình Chiếu Chỉ Đọc (Read-Only)</p>
+          </div>
+        </div>
+        <button onclick="closeQRModal()" class="p-2 rounded-full bg-white/10 hover:bg-[#6B0F1A] text-[#FFFDF7]">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <!-- QR Canvas Column -->
+        <div class="md:col-span-5 flex flex-col items-center justify-center space-y-3">
+          <div class="p-4 rounded-3xl bg-white shadow-[0_0_35px_rgba(212,175,55,0.45)] border-4 border-[#D4AF37] relative">
+            <canvas id="qrOutputCanvas" width="280" height="280" class="w-60 h-60 sm:w-64 sm:h-64 block"></canvas>
+          </div>
+          <span id="qrPublishBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/90 border border-emerald-500/40 text-emerald-300 text-[11px] font-semibold">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+            <span>Đã đồng bộ bản xuất bản mới nhất</span>
+          </span>
+        </div>
+
+        <!-- QR Controls & Options Column -->
+        <div class="md:col-span-7 space-y-4">
+          <!-- Warning if unpublished changes exist -->
+          <div id="qrUnpublishedAlert" class="hidden p-3 rounded-xl bg-amber-950/80 border border-amber-400/50 text-amber-200 text-xs flex items-center justify-between gap-2">
+            <span>Bạn có thay đổi chưa xuất bản. Hãy xuất bản để mã QR cập nhật nội dung mới nhất!</span>
+            <button onclick="publishNewVersion(); generatePresentationQRCode();" class="px-3 py-1 rounded-lg bg-amber-400 text-[#0A1128] font-bold shrink-0">Xuất bản ngay</button>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-[#F7DF8B] mb-1">
+              Đường dẫn Website công khai (Có thể nhập link đã host của bạn)
+            </label>
+            <div class="flex gap-2">
+              <input id="qrBaseUrlInput" type="text" oninput="generatePresentationQRCode()" placeholder="https://ten-website.com/" class="flex-1 px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]" />
+            </div>
+            <p id="qrUrlWarning" class="hidden text-[11px] text-amber-300 mt-1"></p>
+          </div>
+
+          <!-- Options: Center Logo & Compact Data Payload -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div>
+              <label class="block text-[11px] font-semibold text-[#F7DF8B] mb-1">Logo huy hiệu giữa mã QR</label>
+              <select id="qrCenterLogoSelect" onchange="generatePresentationQRCode()" class="w-full px-3 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]">
+                <option value="2011">Huy hiệu Vàng "20/11"</option>
+                <option value="lotus">Hoa Sen Tri Ân</option>
+                <option value="heart">Trái Tim Đỏ Đô</option>
+                <option value="none">Không chèn Logo</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] font-semibold text-[#F7DF8B] mb-1">Chế độ đóng gói đường dẫn</label>
+              <select id="qrPayloadModeSelect" onchange="generatePresentationQRCode()" class="w-full px-3 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/40 text-xs text-[#FFFDF7]">
+                <option value="clean">Chuẩn (?mode=presentation)</option>
+                <option value="portable">Kèm gói dữ liệu (?mode=presentation&amp;pkg=...)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Final Generated Presentation Link Readout -->
+          <div>
+            <label class="block text-[11px] font-semibold text-[#F7DF8B] mb-1">Đường dẫn trình chiếu chỉ đọc được mã hóa trong QR:</label>
+            <input id="qrFinalUrlReadout" type="text" readonly class="w-full px-3 py-2 rounded-xl bg-[#050811] border border-[#D4AF37]/30 text-[11px] text-[#F7DF8B] font-mono select-all" />
+          </div>
+
+          <!-- Action Buttons: Download PNG, Copy Link, Test Presentation Mode -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+            <button onclick="downloadQRCodeAsPng()" class="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-[#0A1128] text-xs font-bold hover:brightness-110 transition">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Tải QR (PNG)</span>
+            </button>
+            <button onclick="copyPresentationLink()" class="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-[#D4AF37]/40 text-xs font-semibold text-[#FFFDF7] transition">
+              <i data-lucide="copy" class="w-4 h-4 text-[#F7DF8B]"></i>
+              <span>Sao chép Link</span>
+            </button>
+            <button onclick="testPresentationReadOnlyMode()" class="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#6B0F1A] hover:bg-[#961B2B] border border-[#D4AF37]/60 text-xs font-semibold text-[#F7DF8B] transition">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              <span>Xem thử Trình chiếu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastNotification" class="fixed top-20 right-4 z-50 hidden max-w-sm px-4 py-3 rounded-2xl bg-[#0A1128]/95 border-2 border-[#D4AF37] text-[#FFFDF7] shadow-2xl flex items-center gap-3 transition-all duration-300">
+    <i data-lucide="sparkles" class="w-5 h-5 text-[#F7DF8B] shrink-0"></i>
+    <p id="toastMessage" class="text-xs sm:text-sm font-medium"></p>
+  </div>
+
+  <!-- ========================================================================
+       EMBEDDED STANDALONE QR CODE GENERATOR ENGINE + MAIN APPLICATION SCRIPT
+  ========================================================================= -->
+  <script>
+    /* =========================================================================
+       1. STANDALONE QR CODE MATRIX GENERATOR (ISO/IEC 18004 Byte Mode, Level M/L)
+       Works 100% offline/online in any browser without external script failure.
+    ========================================================================= */
+    const MiniQR = (function() {
+      // GF(256) exponent & log tables for Reed-Solomon Error Correction
+      const EXP = new Uint8Array(512);
+      const LOG = new Uint8Array(256);
+      (function initTables() {
+        let x = 1;
+        for (let i = 0; i < 255; i++) {
+          EXP[i] = x;
+          LOG[x] = i;
+          x <<= 1;
+          if (x & 0x100) x ^= 0x11d;
+        }
+        for (let i = 255; i < 512; i++) EXP[i] = EXP[i - 255];
+      })();
+
+      function gfMul(a, b) {
+        return (a === 0 || b === 0) ? 0 : EXP[LOG[a] + LOG[b]];
+      }
+
+      function rsGeneratorPoly(degree) {
+        let poly = [1];
+        for (let i = 0; i < degree; i++) {
+          const next = new Array(poly.length + 1).fill(0);
+          const root = EXP[i];
+          for (let j = 0; j < poly.length; j++) {
+            next[j] ^= poly[j];
+            next[j + 1] ^= gfMul(poly[j], root);
+          }
+          poly = next;
+        }
+        return poly;
+      }
+
+      function rsEncode(data, ecLen) {
+        const gen = rsGeneratorPoly(ecLen);
+        const rem = new Uint8Array(ecLen);
+        for (let i = 0; i < data.length; i++) {
+          const factor = data[i] ^ rem[0];
+          for (let j = 0; j < ecLen - 1; j++) {
+            rem[j] = rem[j + 1] ^ gfMul(gen[j + 1], factor);
+          }
+          rem[ecLen - 1] = gfMul(gen[ecLen], factor);
+        }
+        return rem;
+      }
+
+      // Version specification table (Level L & Level M capacities for Byte Mode)
+      // Format: [version, totalDataBytes, ecBytesPerBlock, numBlocks, alignmentCenters]
+      const VERSIONS_L = [
+        null,
+        [1, 19, 7, 1, []],
+        [2, 34, 10, 1, [6, 18]],
+        [3, 55, 15, 1, [6, 22]],
+        [4, 80, 20, 1, [6, 26]],
+        [5, 108, 26, 1, [6, 30]],
+        [6, 136, 18, 2, [6, 34]],
+        [7, 156, 20, 2, [6, 22, 38]],
+        [8, 194, 24, 2, [6, 24, 42]],
+        [9, 232, 30, 2, [6, 26, 46]],
+        [10, 274, 18, 4, [6, 28, 50]],
+        [11, 324, 20, 4, [6, 30, 54]],
+        [12, 370, 24, 4, [6, 32, 58]],
+        [13, 428, 26, 4, [6, 34, 62]],
+        [14, 461, 30, 4, [6, 26, 46, 66]]
+      ];
+
+      function utf8Bytes(str) {
+        return Array.from(new TextEncoder().encode(str));
+      }
+
+      function pickVersion(byteLen) {
+        for (let v = 1; v < VERSIONS_L.length; v++) {
+          const [, totalData] = VERSIONS_L[v];
+          const headerBytes = v >= 10 ? 3 : 2;
+          if (byteLen + headerBytes <= totalData) return VERSIONS_L[v];
+        }
+        return VERSIONS_L[VERSIONS_L.length - 1];
+      }
+
+      function buildCodewords(bytes, spec) {
+        const [ver, totalData, ecPerBlock, numBlocks] = spec;
+        const bits = [];
+        function pushBits(val, len) {
+          for (let i = len - 1; i >= 0; i--) bits.push((val >> i) & 1);
+        }
+        // Byte mode indicator (0100)
+        pushBits(0b0100, 4);
+        pushBits(bytes.length, ver >= 10 ? 16 : 8);
+        for (const b of bytes) pushBits(b, 8);
+
+        const maxBits = totalData * 8;
+        const term = Math.min(4, maxBits - bits.length);
+        pushBits(0, term);
+        while (bits.length % 8 !== 0) bits.push(0);
+
+        const dataBytes = [];
+        for (let i = 0; i < bits.length; i += 8) {
+          let b = 0;
+          for (let j = 0; j < 8; j++) b = (b << 1) | bits[i + j];
+          dataBytes.push(b);
+        }
+        let padToggle = true;
+        while (dataBytes.length < totalData) {
+          dataBytes.push(padToggle ? 0xEC : 0x11);
+          padToggle = !padToggle;
+        }
+
+        // Split into blocks (handle uneven final blocks for v14 if needed)
+        const baseBlockSize = Math.floor(totalData / numBlocks);
+        const extraBlocks = totalData % numBlocks;
+        const dataBlocks = [];
+        const ecBlocks = [];
+        let offset = 0;
+        for (let b = 0; b < numBlocks; b++) {
+          const len = baseBlockSize + (b >= numBlocks - extraBlocks ? 1 : 0);
+          const block = dataBytes.slice(offset, offset + len);
+          offset += len;
+          dataBlocks.push(block);
+          ecBlocks.push(Array.from(rsEncode(block, ecPerBlock)));
+        }
+
+        const interleaved = [];
+        const maxBlockLen = baseBlockSize + (extraBlocks > 0 ? 1 : 0);
+        for (let i = 0; i < maxBlockLen; i++) {
+          for (let b = 0; b < numBlocks; b++) {
+            if (i < dataBlocks[b].length) interleaved.push(dataBlocks[b][i]);
+          }
+        }
+        for (let i = 0; i < ecPerBlock; i++) {
+          for (let b = 0; b < numBlocks; b++) {
+            interleaved.push(ecBlocks[b][i]);
+          }
+        }
+        return interleaved;
+      }
+
+      function createMatrix(text) {
+        const rawBytes = utf8Bytes(text);
+        const spec = pickVersion(rawBytes.length);
+        const [ver, totalData, , , alignCenters] = spec;
+        const maxPayload = totalData - (ver >= 10 ? 3 : 2);
+        const safeBytes = rawBytes.slice(0, maxPayload);
+        const codewords = buildCodewords(safeBytes, spec);
+
+        const size = ver * 4 + 17;
+        const modules = Array.from({ length: size }, () => new Array(size).fill(null));
+        const isFunction = Array.from({ length: size }, () => new Array(size).fill(false));
+
+        function setFunc(r, c, val) {
+          if (r >= 0 && r < size && c >= 0 && c < size) {
+            modules[r][c] = Boolean(val);
+            isFunction[r][c] = true;
+          }
+        }
+
+        // Finder patterns + separators
+        function placeFinder(top, left) {
+          for (let dr = -1; dr <= 7; dr++) {
+            for (let dc = -1; dc <= 7; dc++) {
+              const r = top + dr, c = left + dc;
+              if (r < 0 || r >= size || c < 0 || c >= size) continue;
+              const inOuter = (dr >= 0 && dr <= 6 && (dc === 0 || dc === 6)) || (dc >= 0 && dc <= 6 && (dr === 0 || dr === 6));
+              const inInner = (dr >= 2 && dr <= 4 && dc >= 2 && dc <= 4);
+              setFunc(r, c, inOuter || inInner);
+            }
+          }
+        }
+        placeFinder(0, 0);
+        placeFinder(0, size - 7);
+        placeFinder(size - 7, 0);
+
+        // Timing patterns
+        for (let i = 8; i < size - 8; i++) {
+          setFunc(6, i, i % 2 === 0);
+          setFunc(i, 6, i % 2 === 0);
+        }
+
+        // Alignment patterns
+        for (const r of alignCenters) {
+          for (const c of alignCenters) {
+            if ((r === 6 && c === 6) || (r === 6 && c === size - 7) || (r === size - 7 && c === 6)) continue;
+            for (let dr = -2; dr <= 2; dr++) {
+              for (let dc = -2; dc <= 2; dc++) {
+                setFunc(r + dr, c + dc, Math.max(Math.abs(dr), Math.abs(dc)) !== 1);
+              }
+            }
+          }
+        }
+
+        // Reserve format info areas
+        for (let i = 0; i < 9; i++) {
+          if (!isFunction[8][i]) setFunc(8, i, false);
+          if (!isFunction[i][8]) setFunc(i, 8, false);
+        }
+        for (let i = 0; i < 8; i++) {
+          if (!isFunction[8][size - 1 - i]) setFunc(8, size - 1 - i, false);
+          if (!isFunction[size - 1 - i][8]) setFunc(size - 1 - i, 8, false);
+        }
+        setFunc(size - 8, 8, true); // Dark module
+
+        // Reserve version info for version >= 7
+        if (ver >= 7) {
+          let rem = ver;
+          for (let i = 0; i < 12; i++) rem = (rem << 1) ^ ((rem >> 11) * 0x1F25);
+          const verBits = (ver << 12) | rem;
+          for (let i = 0; i < 18; i++) {
+            const bit = ((verBits >> i) & 1) !== 0;
+            const a = size - 11 + (i % 3);
+            const b = Math.floor(i / 3);
+            setFunc(a, b, bit);
+            setFunc(b, a, bit);
+          }
+        }
+
+        // Place data bits in zig-zag
+        let bitIdx = 0;
+        const totalBits = codewords.length * 8;
+        for (let right = size - 1; right >= 1; right -= 2) {
+          if (right === 6) right = 5;
+          for (let vert = 0; vert < size; vert++) {
+            for (let j = 0; j < 2; j++) {
+              const c = right - j;
+              const upward = ((right + 1) & 2) === 0;
+              const r = upward ? size - 1 - vert : vert;
+              if (!isFunction[r][c]) {
+                let dark = false;
+                if (bitIdx < totalBits) {
+                  dark = ((codewords[bitIdx >> 3] >> (7 - (bitIdx & 7))) & 1) !== 0;
+                  bitIdx++;
+                }
+                // Apply Mask 0: (r + c) % 2 === 0
+                if ((r + c) % 2 === 0) dark = !dark;
+                modules[r][c] = dark;
+              }
+            }
+          }
+        }
+
+        // Write Format Information for Level L (01) + Mask 0 (000) -> BCH masked = 0x77C4
+        const formatBits = 0x77C4;
+        for (let i = 0; i <= 5; i++) setFunc(8, i, ((formatBits >> i) & 1) !== 0);
+        setFunc(8, 7, ((formatBits >> 6) & 1) !== 0);
+        setFunc(8, 8, ((formatBits >> 7) & 1) !== 0);
+        setFunc(7, 8, ((formatBits >> 8) & 1) !== 0);
+        for (let i = 9; i < 15; i++) setFunc(14 - i, 8, ((formatBits >> i) & 1) !== 0);
+
+        for (let i = 0; i < 8; i++) setFunc(size - 1 - i, 8, ((formatBits >> i) & 1) !== 0);
+        for (let i = 8; i < 15; i++) setFunc(8, size - 15 + i, ((formatBits >> i) & 1) !== 0);
+
+        return modules;
+      }
+
+      return { createMatrix };
+    })();
+
+    /* =========================================================================
+       2. DEFAULT RICH CONTENT & STATE MANAGEMENT
+    ========================================================================= */
+    const STORAGE_KEY_PUBLISHED = 'trian2011_published_v1';
+    const STORAGE_KEY_ADMIN_HASH = 'trian2011_admin_sha256_v1';
+    // SHA-256 hash of default passcode "20112026" (No plaintext password stored)
+    const DEFAULT_PASS_SHA256 = '4a5a96d7ed96092cdac7b7971fb825720bc3f7d87dab14a220514c0ac786bdb9';
+    const ACCEPTED_DEFAULT_HASHES = [
+      '4a5a96d7ed96092cdac7b7971fb825720bc3f7d87dab14a220514c0ac786bdb9', // 20112026
+      '72d1b5da6eeaf1789df86487da50ad5e9dadb5ffaecb56b6de592aa286c9c1b8', // 2011
+      '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'  // admin
+    ];
+
+    function createSvgIllustrationDataUri(type) {
+      const svgs = {
+        ferry: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+          <defs>
+            <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0A1128"/>
+              <stop offset="55%" stop-color="#1E1338"/>
+              <stop offset="100%" stop-color="#6B0F1A"/>
+            </linearGradient>
+            <radialGradient id="sun1" cx="50%" cy="38%" r="35%">
+              <stop offset="0%" stop-color="#FFF5C3"/>
+              <stop offset="45%" stop-color="#D4AF37" stop-opacity="0.75"/>
+              <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="800" height="500" fill="url(#bg1)"/>
+          <circle cx="400" cy="190" r="175" fill="url(#sun1)"/>
+          <circle cx="400" cy="190" r="62" fill="#F7DF8B" fill-opacity="0.9"/>
+          <path d="M0 340 Q200 310 400 340 T800 335 L800 500 L0 500 Z" fill="#0D1936" fill-opacity="0.9"/>
+          <path d="M0 385 Q240 360 480 390 T800 385 L800 500 L0 500 Z" fill="#070E22"/>
+          <!-- Ferry Boat & Ferryman Silhouette -->
+          <path d="M250 345 L530 345 L485 378 L295 378 Z" fill="#D4AF37"/>
+          <circle cx="350" cy="275" r="14" fill="#FFFDF7"/>
+          <path d="M338 292 L364 292 L372 345 L332 345 Z" fill="#FFFDF7"/>
+          <path d="M342 266 L372 276 L325 276 Z" fill="#D4AF37"/>
+          <line x1="365" y1="302" x2="435" y2="395" stroke="#F7DF8B" stroke-width="5" stroke-linecap="round"/>
+          <!-- Glowing Knowledge Book -->
+          <path d="M420 315 Q445 305 470 318 L470 342 Q445 330 420 342 Z" fill="#F7DF8B"/>
+          <text x="400" y="450" text-anchor="middle" fill="#F7DF8B" font-family="Georgia, serif" font-size="24" font-style="italic">Chuyến Đò Tri Thức Thầm Lặng</text>
+        </svg>`,
+
+        chalkboard: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+          <defs>
+            <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#111D3E"/>
+              <stop offset="100%" stop-color="#4A0E17"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="500" fill="url(#bg2)"/>
+          <rect x="90" y="65" width="620" height="330" rx="18" fill="#0E2F28" stroke="#D4AF37" stroke-width="8"/>
+          <text x="400" y="155" text-anchor="middle" fill="#FFFDF7" font-family="Georgia, serif" font-size="36" font-weight="bold">TÔN SƯ TRỌNG ĐẠO</text>
+          <text x="400" y="210" text-anchor="middle" fill="#F7DF8B" font-family="Georgia, serif" font-size="23" font-style="italic">"Bụi phấn rơi cho tóc thầy thêm bạc</text>
+          <text x="400" y="248" text-anchor="middle" fill="#F7DF8B" font-family="Georgia, serif" font-size="23" font-style="italic">Ươm mầm xanh cho ước mơ vươn xa"</text>
+          <line x1="230" y1="285" x2="570" y2="285" stroke="#D4AF37" stroke-width="2"/>
+          <!-- Lotus & Chalk -->
+          <rect x="490" y="365" width="75" height="14" rx="5" fill="#FFFDF7"/>
+          <circle cx="240" cy="340" r="28" fill="#D4AF37" fill-opacity="0.25"/>
+          <text x="400" y="452" text-anchor="middle" fill="#F7DF8B" font-family="Georgia, serif" font-size="22">Nét Phấn Trắng &amp; Bảng Đen Kỷ Niệm</text>
+        </svg>`,
+
+        sunflower: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+          <defs>
+            <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6B0F1A"/>
+              <stop offset="50%" stop-color="#1E1436"/>
+              <stop offset="100%" stop-color="#0A1128"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="500" fill="url(#bg3)"/>
+          <circle cx="400" cy="220" r="130" fill="#D4AF37" fill-opacity="0.18"/>
+          <g transform="translate(400,220)">
+            <circle r="85" fill="#F7DF8B" fill-opacity="0.88"/>
+            <circle r="48" fill="#6B0F1A" stroke="#D4AF37" stroke-width="5"/>
+          </g>
+          <text x="400" y="228" text-anchor="middle" fill="#FFFDF7" font-family="Georgia, serif" font-size="28" font-weight="bold">20/11</text>
+          <text x="400" y="425" text-anchor="middle" fill="#F7DF8B" font-family="Georgia, serif" font-size="26" font-weight="bold">Đóa Hoa Hướng Dương Tri Ân</text>
+        </svg>`,
+
+        schoolyard: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+          <defs>
+            <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#192853"/>
+              <stop offset="100%" stop-color="#6B0F1A"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="500" fill="url(#bg4)"/>
+          <circle cx="650" cy="110" r="55" fill="#F7DF8B" fill-opacity="0.85"/>
+          <rect x="140" y="180" width="520" height="210" rx="10" fill="#111D3E" stroke="#D4AF37" stroke-width="4"/>
+          <polygon points="110,180 400,75 690,180" fill="#6B0F1A" stroke="#F7DF8B" stroke-width="4"/>
+          <circle cx="400" cy="140" r="22" fill="#F7DF8B"/>
+          <rect x="365" y="280" width="70" height="110" rx="35" fill="#D4AF37"/>
+          <text x="400" y="445" text-anchor="middle" fill="#FFFDF7" font-family="Georgia, serif" font-size="24">Mái Trường Dấu Yêu &amp; Những Mùa Hoa</text>
+        </svg>`,
+
+        classphoto: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+          <rect width="800" height="500" fill="#0F1B3D"/>
+          <rect x="50" y="45" width="700" height="410" rx="24" fill="#6B0F1A" fill-opacity="0.55" stroke="#D4AF37" stroke-width="4"/>
+          <circle cx="260" cy="210" r="42" fill="#F7DF8B"/>
+          <path d="M195 335 Q260 265 325 335 Z" fill="#D4AF37"/>
+          <circle cx="400" cy="195" r="48" fill="#FFFDF7"/>
+          <path d="M325 335 Q400 255 475 335 Z" fill="#F7DF8B"/>
+          <circle cx="540" cy="210" r="42" fill="#F7DF8B"/>
+          <path d="M475 335 Q540 265 605 335 Z" fill="#D4AF37"/>
+          <text x="400" y="405" text-anchor="middle" fill="#F7DF8B" font-family="Georgia, serif" font-size="26" font-weight="bold">Khoảnh Khắc Thầy Trò Sum Họp</text>
+        </svg>`,
+
+        lantern: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+          <rect width="800" height="500" fill="#0A1128"/>
+          <circle cx="400" cy="230" r="160" fill="#D4AF37" fill-opacity="0.22"/>
+          <path d="M330 150 Q400 110 470 150 L450 310 Q400 340 350 310 Z" fill="#6B0F1A" stroke="#F7DF8B" stroke-width="5"/>
+          <circle cx="400" cy="230" r="35" fill="#FFF5C3"/>
+          <text x="400" y="425" text-anchor="middle" fill="#F7DF8B" font-family="Georgia, serif" font-size="25">Ngọn Hải Đăng Soi Đường Tri Thức</text>
+        </svg>`
+      };
+      const raw = svgs[type] || svgs.ferry;
+      return 'data:image/svg+xml;utf8,' + encodeURIComponent(raw);
+    }
+
+    const DEFAULT_STATE = {
+      versionTimestamp: '20/11/2026 • 19:20',
+      heroBadge: 'KỶ NIỆM 44 NĂM NGÀY NHÀ GIÁO VIỆT NAM (20/11/1982 – 20/11/2026)',
+      heroCtaText: 'MỞ THIỆP CHÚC MỪNG 20/11',
+      heroTitle: 'CHÀO MỪNG NGÀY NHÀ GIÁO VIỆT NAM 20/11',
+      heroSubtitle: 'Tri ân những người đã dành cả cuộc đời để gieo mầm tri thức',
+      schoolName: 'Trường THPT Chuyên',
+      className: 'Tập thể Lớp 12A1',
+      authorName: 'Ban Truyền Thông 12A1',
+      cardHeaderBadge: '✦ THIỆP TRI ÂN NGÀY NHÀ GIÁO VIỆT NAM 20/11 ✦',
+      cardRecipient: '✦ Kính tặng Quý Thầy Cô ✦',
+      cardSenderSign: 'Kính chúc từ: Tập thể Lớp 12A1',
+      cardFooterNote: 'Tập thể Lớp 12A1 – Trường THPT Chuyên',
+      typingSpeedMs: 28,
+      storyTitle: 'Hành Trình Người Lái Đò Thầm Lặng',
+      storyIntro: 'Ngày Nhà giáo Việt Nam 20/11 không chỉ là dịp lễ tri ân truyền thống "Tôn sư trọng đạo" của dân tộc, mà còn là khoảnh khắc để mỗi thế hệ học trò ngoảnh lại nhìn dòng sông tri thức nơi bóng dáng thầy cô vẫn miệt mài chèo lái qua bao mùa phượng nở.',
+      storyChapters: [
+        {
+          step: 'CHƯƠNG I • KHỞI NGUỒN',
+          title: 'Bến Đò Tri Thức & Truyền Thống 20/11',
+          desc: 'Từ Hiến chương các Nhà giáo năm 1957 đến quyết định chọn ngày 20/11/1982 làm Ngày Nhà giáo Việt Nam, truyền thống tôn vinh người thầy đã trở thành biểu tượng văn hóa cao đẹp của dân tộc Việt Nam.',
+          image: createSvgIllustrationDataUri('ferry')
+        },
+        {
+          step: 'CHƯƠNG II • THẦM LẶNG',
+          title: 'Những Đêm Trắng Bên Trang Giáo Án',
+          desc: 'Đằng sau mỗi bài giảng truyền cảm hứng trên bục giảng là biết bao giờ phút miệt mài bên trang giáo án, từng nét phấn trắng điểm sương trên mái tóc thầy cô vì tương lai bao thế hệ học trò.',
+          image: createSvgIllustrationDataUri('chalkboard')
+        },
+        {
+          step: 'CHƯƠNG III • TIẾP BƯỚC',
+          title: 'Những Đóa Hoa Tri Thức Vươn Xa',
+          desc: 'Chuyến đò cập bến, lớp lớp học trò tung cánh bay tới những chân trời mới, còn người lái đò vẫn ở lại bến sông xưa tiếp tục ươm mầm những ước mơ xanh.',
+          image: createSvgIllustrationDataUri('lantern')
+        }
+      ],
+      wishes: [
+        {
+          id: 'w1',
+          quote: 'Cảm ơn thầy cô đã thắp sáng những ước mơ.',
+          message: 'Nhờ ngọn lửa nhiệt huyết và sự tận tâm của thầy cô, chúng em đã học được cách tin vào bản thân và kiên trì theo đuổi hoài bão lớn.',
+          sender: 'Tập thể học sinh Lớp 12A1',
+          recipient: 'Kính tặng Quý Thầy Cô bộ môn',
+          effect: 'Hiệu ứng Ánh Vàng Lan Tỏa'
+        },
+        {
+          id: 'w2',
+          quote: 'Một chữ cũng là thầy, nửa chữ cũng là thầy.',
+          message: 'Mỗi bài học kiến thức và đạo làm người thầy cô trao truyền là hành trang vô giá theo chúng em suốt chặng đường trưởng thành.',
+          sender: 'Ban Cán Sự Lớp 12A1',
+          recipient: 'Kính tặng Thầy Cô giáo Chủ nhiệm',
+          effect: 'Hiệu ứng Lật Thiệp 3D'
+        },
+        {
+          id: 'w3',
+          quote: 'Cảm ơn những người đã âm thầm gieo hạt giống tri thức.',
+          message: 'Giữa dòng đời vội vã, sự kiên nhẫn và bao dung của thầy cô luôn là bến đỗ bình yên nâng bước chúng em qua mọi thử thách.',
+          sender: 'Đội tuyển HSG Toán 12',
+          recipient: 'Kính tặng Thầy Cô bồi dưỡng đội tuyển',
+          effect: 'Hiệu ứng Hoa Sen Nở'
+        },
+        {
+          id: 'w4',
+          quote: 'Kính chúc thầy cô luôn mạnh khỏe, hạnh phúc và thành công.',
+          message: 'Nhân ngày Nhà giáo Việt Nam 20/11, chúng em kính chúc thầy cô luôn giữ mãi nụ cười ấm áp và ngọn lửa đam mê trên bục giảng.',
+          sender: 'Niên khóa 2024 – 2027',
+          recipient: 'Kính tặng Ban Giám Hiệu & Hội Đồng Sư Phạm',
+          effect: 'Hiệu ứng Sao Khuê Tỏa Sáng'
+        }
+      ],
+      album: [
+        {
+          id: 'a1',
+          title: 'Chuyến Đò Tri Thức Mùa Thu',
+          caption: 'Hình ảnh ẩn dụ người lái đò cần mẫn đưa bao thế hệ học trò cập bến ước mơ.',
+          tag: 'BIỂU TƯỢNG 20/11',
+          url: createSvgIllustrationDataUri('ferry')
+        },
+        {
+          id: 'a2',
+          title: 'Nét Phấn Trắng & Bảng Đen',
+          caption: 'Những dòng chữ nắn nót chứa đựng tâm huyết và tình yêu thương của thầy cô.',
+          tag: 'KỶ NIỆM BỤC GIẢNG',
+          url: createSvgIllustrationDataUri('chalkboard')
+        },
+        {
+          id: 'a3',
+          title: 'Đóa Hướng Dương Tri Ân',
+          caption: 'Như hoa hướng dương luôn hướng về mặt trời, học trò luôn hướng về công ơn dưỡng dục của thầy cô.',
+          tag: 'HOA TẶNG THẦY CÔ',
+          url: createSvgIllustrationDataUri('sunflower')
+        },
+        {
+          id: 'a4',
+          title: 'Mái Trường Nơi Chắp Cánh',
+          caption: 'Góc sân trường ngập nắng nơi lưu giữ thanh xuân tươi đẹp của thầy và trò.',
+          tag: 'MÁI TRƯỜNG',
+          url: createSvgIllustrationDataUri('schoolyard')
+        },
+        {
+          id: 'a5',
+          title: 'Khoảnh Khắc Sum Họp 20/11',
+          caption: 'Nụ cười rạng rỡ trong ngày hội ngộ tri ân những người gieo hạt giống tâm hồn.',
+          tag: 'HỘI NGỘ',
+          url: createSvgIllustrationDataUri('classphoto')
+        },
+        {
+          id: 'a6',
+          title: 'Ngọn Hải Đăng Soi Đường',
+          caption: 'Ánh sáng tri thức của thầy cô mãi soi đường cho chúng em trên vạn dặm tương lai.',
+          tag: 'TỎA SÁNG',
+          url: createSvgIllustrationDataUri('lantern')
+        }
+      ],
+      video: {
+        mode: 'cinematic_canvas',
+        url: '',
+        caption: 'Phim đồ họa điện ảnh: "Chuyến Đò Tri Thức – Tri Ân Ngày Nhà Giáo Việt Nam 20/11"'
+      },
+      endingQuote: 'Có một nghề không trồng cây vào đất, nhưng lại nở cho đời những đóa hoa tri thức.',
+      endingMessage: 'Xin kính chúc quý thầy cô có một ngày 20/11 thật nhiều niềm vui, sức khỏe và hạnh phúc. Cảm ơn thầy cô vì tất cả!',
+      theme: {
+        crimson: '#6B0F1A',
+        gold: '#D4AF37',
+        navy: '#0A1128',
+        customBgUrl: ''
+      },
+      sectionOrder: ['hero', 'wishes']
+    };
+
+    let appState = JSON.parse(JSON.stringify(DEFAULT_STATE));
+    let isPresentationReadOnly = false;
+    let isAdminAuthenticated = false;
+    let hasUnpublishedDraftChanges = false;
+    let isSlideDeckMode = false;
+    let currentSlideIndex = 0;
+    let autoSlideInterval = null;
+
+    // Album state
+    let currentLightboxIndex = 0;
+    let albumSlideshowInterval = null;
+
+    // Audio & FX state
+    let audioCtx = null;
+    let isMusicPlaying = false;
+    let musicLoopTimeout = null;
+    let isVisualFXEnabled = true;
+
+    // Built-in Tribute Video Canvas player state
+    let isTributeVideoPlaying = false;
+    let tributeVideoStartTime = 0;
+    let tributeVideoAnimFrame = null;
+
+    /* =========================================================================
+       3. URL PARAMETER & READ-ONLY PRESENTATION MODE DETECTION
+    ========================================================================= */
+    function detectPresentationModeAndLoadState() {
+      // Load from localStorage first if available
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY_PUBLISHED);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          appState = Object.assign({}, JSON.parse(JSON.stringify(DEFAULT_STATE)), parsed);
+        }
+      } catch (e) {
+        console.warn('Không thể đọc localStorage:', e);
+      }
+
+      // Check URL query parameters (?mode=presentation & optional ?pkg=...)
+      const params = new URLSearchParams(window.location.search);
+      const modeParam = (params.get('mode') || '').toLowerCase();
+      const pkgParam = params.get('pkg');
+
+      // Decode portable URL package if provided (allows cross-device sharing without server)
+      if (pkgParam) {
+        try {
+          const jsonStr = decodeURIComponent(escape(atob(pkgParam)));
+          const pkgData = JSON.parse(jsonStr);
+          if (pkgData.hb) appState.heroBadge = pkgData.hb;
+          if (pkgData.cta) appState.heroCtaText = pkgData.cta;
+          if (pkgData.t) appState.heroTitle = pkgData.t;
+          if (pkgData.st) appState.heroSubtitle = pkgData.st;
+          if (pkgData.sc) appState.schoolName = pkgData.sc;
+          if (pkgData.cl) appState.className = pkgData.cl;
+          if (pkgData.au) appState.authorName = pkgData.au;
+          if (pkgData.chb) appState.cardHeaderBadge = pkgData.chb;
+          if (pkgData.cr) appState.cardRecipient = pkgData.cr;
+          if (pkgData.cs) appState.cardSenderSign = pkgData.cs;
+          if (pkgData.cf) appState.cardFooterNote = pkgData.cf;
+          if (pkgData.eq) appState.endingQuote = pkgData.eq;
+          if (pkgData.em) appState.endingMessage = pkgData.em;
+          if (pkgData.c && Array.isArray(pkgData.c)) {
+            appState.theme.crimson = pkgData.c[0] || appState.theme.crimson;
+            appState.theme.gold = pkgData.c[1] || appState.theme.gold;
+            appState.theme.navy = pkgData.c[2] || appState.theme.navy;
+          }
+          if (pkgData.w && Array.isArray(pkgData.w) && pkgData.w.length > 0) {
+            appState.wishes = pkgData.w.map((item, idx) => ({
+              id: 'w_pkg_' + idx,
+              quote: item.q || '',
+              message: item.m || '',
+              sender: item.s || appState.className,
+              recipient: item.r || 'Kính tặng Thầy Cô',
+              effect: item.e || 'Hiệu ứng Ánh Vàng Lan Tỏa'
+            }));
+          }
+        } catch (err) {
+          console.warn('Không thể giải mã gói dữ liệu URL:', err);
+        }
+      }
+
+      appState.sectionOrder = ['hero', 'wishes'];
+      if (modeParam === 'presentation') {
+        activateStrictReadOnlyPresentationMode();
+      }
+    }
+
+    function activateStrictReadOnlyPresentationMode() {
+      isPresentationReadOnly = true;
+      isAdminAuthenticated = false;
+      document.body.classList.add('is-presentation');
+
+      // Physically remove admin DOM modals & buttons so viewers cannot unhide or invoke them
+      const adminModal = document.getElementById('adminPanelModal');
+      const authModal = document.getElementById('adminAuthModal');
+      const qrModal = document.getElementById('qrSystemModal');
+      if (adminModal) adminModal.remove();
+      if (authModal) authModal.remove();
+      if (qrModal) qrModal.remove();
+
+      document.querySelectorAll('.admin-only-control').forEach(el => el.remove());
+
+      const badge = document.getElementById('readOnlyStatusBadge');
+      if (badge) {
+        badge.classList.remove('hidden');
+        badge.classList.add('inline-flex');
+      }
+
+      // Automatically enter Slide Deck presentation layout for best viewing experience
+      if (!isSlideDeckMode) {
+        toggleSlideDeckMode(true);
+      }
+    }
+
+    /* =========================================================================
+       4. RENDERING WEBSITE CONTENT FROM STATE
+    ========================================================================= */
+    function renderAllContent() {
+      // Apply theme CSS variables
+      document.documentElement.style.setProperty('--color-crimson', appState.theme.crimson || '#6B0F1A');
+      document.documentElement.style.setProperty('--color-gold', appState.theme.gold || '#D4AF37');
+      document.documentElement.style.setProperty('--color-navy', appState.theme.navy || '#0A1128');
+
+      if (appState.theme.customBgUrl && appState.theme.customBgUrl.trim() !== '') {
+        document.body.style.backgroundImage = `linear-gradient(rgba(10, 17, 40, 0.82), rgba(31, 11, 25, 0.88)), url('${appState.theme.customBgUrl.trim()}')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+      } else {
+        document.body.style.backgroundImage = '';
+      }
+
+      // Hero & School metadata
+      if (document.getElementById('heroCreditMeta')) {
+        document.getElementById('heroCreditMeta').textContent = appState.heroBadge || DEFAULT_STATE.heroBadge;
+      }
+      if (document.getElementById('heroCtaButtonLabel')) {
+        document.getElementById('heroCtaButtonLabel').textContent = appState.heroCtaText || DEFAULT_STATE.heroCtaText;
+      }
+      document.getElementById('heroMainTitle').textContent = appState.heroTitle;
+      document.getElementById('heroSubTitle').textContent = `"${appState.heroSubtitle.replace(/^"|"$/g, '')}"`;
+      document.getElementById('displaySchoolName').textContent = appState.schoolName;
+      document.getElementById('displayClassName').textContent = appState.className;
+      document.getElementById('displayAuthorName').textContent = appState.authorName;
+      document.getElementById('navBadgeSchool').textContent = `${appState.schoolName} • ${appState.className}`;
+      if (document.getElementById('cardHeaderBadgeText')) {
+        document.getElementById('cardHeaderBadgeText').textContent = appState.cardHeaderBadge || DEFAULT_STATE.cardHeaderBadge;
+      }
+      document.getElementById('footerAttribution').textContent = appState.cardFooterNote || `${appState.className} – ${appState.schoolName}`;
+
+      // Section 2: Story
+      document.getElementById('storySectionTitle').textContent = appState.storyTitle;
+      document.getElementById('storySectionIntro').textContent = appState.storyIntro;
+      renderStoryChapters();
+
+      // Section 3: Wishes
+      renderWishesGrid();
+
+      // Section 4: Album
+      renderAlbumGrid();
+
+      // Section 5: Video
+      renderVideoSection();
+
+      // Section 6: Ending
+      document.getElementById('endingQuoteTypewriter').textContent = `"${appState.endingQuote.replace(/^"|"$/g, '')}"`;
+      document.getElementById('endingMessageTypewriter').textContent = `"${appState.endingMessage.replace(/^"|"$/g, '')}"`;
+
+      // Apply Section Ordering
+      applySectionDomOrdering();
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function renderStoryChapters() {
+      const container = document.getElementById('storyChaptersGrid');
+      if (!container) return;
+      container.innerHTML = appState.storyChapters.map((chap, idx) => `
+        <article class="card-3d-wrap">
+          <div class="card-3d luxury-card rounded-3xl overflow-hidden flex flex-col h-full">
+            <div class="relative h-52 overflow-hidden bg-[#070D1F] border-b border-[#D4AF37]/30">
+              <img src="${chap.image}" alt="${escapeHtml(chap.title)}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#0A1128]/85 border border-[#D4AF37]/50 text-[11px] font-bold text-[#F7DF8B] tracking-wider">
+                ${escapeHtml(chap.step)}
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2.5">
+                <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-[#F7DF8B]">${escapeHtml(chap.title)}</h3>
+                <p class="text-sm text-[#FFFDF7]/85 leading-relaxed">${escapeHtml(chap.desc)}</p>
+              </div>
+              <div class="pt-3 border-t border-[#D4AF37]/20 flex items-center justify-between text-xs text-[#F7DF8B]/80">
+                <span>Hành trình tri ân #0${idx + 1}</span>
+                <span class="font-serif-luxury italic">20/11</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    let wishSpotlightIdx = 0;
+    let wishSpotlightTypingTimer = null;
+    let wishSpotlightCycleTimer = null;
+    let isWishesMarqueePaused = false;
+    let isWishesGridVisible = false;
+
+    function renderWishesGrid() {
+      const grid = document.getElementById('wishesGrid');
+      const track1 = document.getElementById('wishesMarqueeTrack1');
+      const track2 = document.getElementById('wishesMarqueeTrack2');
+      const list = (appState.wishes && appState.wishes.length) ? appState.wishes : DEFAULT_STATE.wishes;
+
+      // 1. Render Continuous Marquee Streams (duplicated for seamless infinite loop)
+      const streamItemsHtml = list.map((wish, idx) => `
+        <button onclick="selectWishSpotlight(${idx})" class="text-left group inline-flex items-center gap-4 px-6 py-3 rounded-2xl bg-[#111D3E]/90 hover:bg-[#6B0F1A] border border-[#D4AF37]/45 transition shrink-0 shadow-md">
+          <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] text-[#0A1128] font-bold text-xs flex items-center justify-center shrink-0">
+            0${idx + 1}
+          </span>
+          <div class="max-w-md">
+            <p class="font-serif-luxury text-base sm:text-lg font-bold text-[#F7DF8B] truncate">"${escapeHtml(wish.quote)}"</p>
+            <p class="text-xs text-[#FFFDF7]/80 truncate">${escapeHtml(wish.recipient || 'Kính tặng Thầy Cô')} • <span class="text-[#F7DF8B]">${escapeHtml(wish.sender || appState.className)}</span></p>
+          </div>
+        </button>
+      `).join('');
+
+      if (track1) track1.innerHTML = streamItemsHtml + streamItemsHtml;
+
+      const stream2Html = list.slice().reverse().map((wish) => `
+        <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-[#0A1128]/85 border border-[#D4AF37]/35 text-xs sm:text-sm text-[#FFFDF7]/95 shrink-0">
+          <span class="text-[#F7DF8B] font-bold">✦ ${escapeHtml(wish.recipient || 'Tri Ân 20/11')}:</span>
+          <span class="italic">"${escapeHtml(wish.quote)}"</span>
+          <span class="text-[#D4AF37]">— ${escapeHtml(wish.message || '')}</span>
+          <span class="text-[#F7DF8B] font-semibold">(${escapeHtml(wish.sender || appState.className)})</span>
+        </div>
+      `).join('');
+
+      if (track2) track2.innerHTML = stream2Html + stream2Html;
+
+      // 2. Render Optional Grid Cards
+      if (grid) {
+        grid.innerHTML = list.map((wish) => `
+          <div class="card-3d-wrap">
+            <div class="card-3d luxury-card rounded-3xl p-6 sm:p-8 relative overflow-hidden h-full flex flex-col justify-between space-y-5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#6B0F1A]/80 border border-[#D4AF37]/50 text-[11px] font-semibold text-[#F7DF8B]">
+                  <i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i>
+                  <span>${escapeHtml(wish.recipient || 'Kính tặng Quý Thầy Cô')}</span>
+                </span>
+                <span class="text-[11px] text-[#F7DF8B]/75 italic">${escapeHtml(wish.effect || 'Chạy Chữ Tri Ân')}</span>
+              </div>
+              <div class="space-y-3">
+                <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold gold-gradient-text leading-snug">
+                  "${escapeHtml(wish.quote)}"
+                </h3>
+                <p class="text-sm text-[#FFFDF7]/85 leading-relaxed">
+                  ${escapeHtml(wish.message || '')}
+                </p>
+              </div>
+              <div class="pt-4 border-t border-[#D4AF37]/25 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2 text-xs text-[#F7DF8B]">
+                  <i data-lucide="feather" class="w-4 h-4"></i>
+                  <span class="font-semibold">${escapeHtml(wish.sender || appState.className)}</span>
+                </div>
+                ${!isPresentationReadOnly ? `
+                  <button onclick="deleteWishCard('${wish.id}')" title="Xóa lời chúc này" class="admin-only-control p-1.5 rounded-lg bg-red-950/70 hover:bg-red-800 text-red-200 text-xs transition">
+                    <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 3. Start or refresh Live Typewriter Spotlight
+      runWishSpotlightTypewriter(wishSpotlightIdx);
+    }
+
+    function selectWishSpotlight(index) {
+      const list = (appState.wishes && appState.wishes.length) ? appState.wishes : DEFAULT_STATE.wishes;
+      wishSpotlightIdx = (index + list.length) % list.length;
+      runWishSpotlightTypewriter(wishSpotlightIdx);
+    }
+
+    function stepWishSpotlight(delta) {
+      selectWishSpotlight(wishSpotlightIdx + delta);
+    }
+
+    function runWishSpotlightTypewriter(index) {
+      const list = (appState.wishes && appState.wishes.length) ? appState.wishes : DEFAULT_STATE.wishes;
+      if (!list.length) return;
+      wishSpotlightIdx = (index + list.length) % list.length;
+      const item = list[wishSpotlightIdx];
+
+      const recEl = document.getElementById('wishSpotlightRecipient');
+      const countEl = document.getElementById('wishSpotlightCounter');
+      const quoteEl = document.getElementById('wishSpotlightQuote');
+      const msgEl = document.getElementById('wishSpotlightMessage');
+      const senderEl = document.getElementById('wishSpotlightSender');
+      const effectEl = document.getElementById('wishSpotlightEffect');
+
+      if (!quoteEl || !msgEl) return;
+
+      if (recEl) recEl.textContent = `✦ ${item.recipient || 'Kính tặng Quý Thầy Cô'}`;
+      if (countEl) countEl.textContent = `${wishSpotlightIdx + 1} / ${list.length}`;
+      if (senderEl) senderEl.textContent = `Người gửi: ${item.sender || appState.className}`;
+      if (effectEl) effectEl.textContent = item.effect || 'Hiệu ứng Chạy Chữ Điện Ảnh';
+
+      if (wishSpotlightTypingTimer) clearInterval(wishSpotlightTypingTimer);
+      if (wishSpotlightCycleTimer) clearTimeout(wishSpotlightCycleTimer);
+
+      const fullQuote = `"${item.quote}"`;
+      const fullMsg = item.message || '';
+      quoteEl.textContent = '';
+      msgEl.textContent = '';
+
+      const singleQuote = `"${(appState.endingQuote || '').replace(/^"|"$/g, '')}"`;
+      const singleMsg = (appState.endingMessage || '').replace(/^"|"$/g, '');
+      if (recEl) recEl.textContent = appState.cardRecipient || `✦ Kính tặng Quý Thầy Cô • ${appState.schoolName} ✦`;
+      if (senderEl) senderEl.textContent = appState.cardSenderSign || `Kính chúc từ: ${appState.className} (${appState.authorName})`;
+
+      const speed = Number(appState.typingSpeedMs ?? 28);
+      if (speed <= 0) {
+        quoteEl.textContent = singleQuote;
+        msgEl.textContent = singleMsg;
+        return;
+      }
+
+      let qi = 0;
+      let mi = 0;
+      wishSpotlightTypingTimer = setInterval(() => {
+        if (qi < singleQuote.length) {
+          quoteEl.textContent += singleQuote.charAt(qi);
+          qi++;
+        } else if (mi < singleMsg.length) {
+          msgEl.textContent += singleMsg.charAt(mi);
+          mi++;
+        } else {
+          clearInterval(wishSpotlightTypingTimer);
+          wishSpotlightTypingTimer = null;
+        }
+      }, speed);
+    }
+
+    function toggleWishesMarqueePause() {
+      isWishesMarqueePaused = !isWishesMarqueePaused;
+      const wrapper = document.getElementById('wishesMarqueeWrapper');
+      const label = document.getElementById('wishesPauseLabel');
+      if (wrapper) {
+        wrapper.classList.toggle('marquee-paused', isWishesMarqueePaused);
+      }
+      if (label) {
+        label.textContent = isWishesMarqueePaused ? 'Tiếp tục chạy chữ' : 'Tạm dừng chạy chữ';
+      }
+      if (!isWishesMarqueePaused && !wishSpotlightTypingTimer) {
+        stepWishSpotlight(1);
+      }
+    }
+
+    function toggleWishesDisplayLayout() {
+      isWishesGridVisible = !isWishesGridVisible;
+      const grid = document.getElementById('wishesGrid');
+      const label = document.getElementById('wishesLayoutLabel');
+      if (grid) {
+        if (isWishesGridVisible) {
+          grid.classList.remove('hidden');
+          grid.classList.add('grid');
+        } else {
+          grid.classList.add('hidden');
+          grid.classList.remove('grid');
+        }
+      }
+      if (label) {
+        label.textContent = isWishesGridVisible ? 'Ẩn Lưới Thiệp (Chỉ Chạy Chữ)' : 'Xem thêm Lưới Thiệp';
+      }
+    }
+
+    function renderAlbumGrid() {
+      const grid = document.getElementById('albumGrid');
+      if (!grid) return;
+      grid.innerHTML = appState.album.map((photo, idx) => `
+        <div class="group luxury-card rounded-3xl overflow-hidden flex flex-col">
+          <div onclick="openAlbumLightbox(${idx})" class="relative h-56 overflow-hidden bg-[#060B18] cursor-pointer">
+            <img src="${photo.url}" alt="${escapeHtml(photo.title)}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0A1128]/85 border border-[#D4AF37]/50 text-[10px] font-bold text-[#F7DF8B] uppercase tracking-wider">
+              ${escapeHtml(photo.tag || 'KỶ NIỆM 20/11')}
+            </div>
+            <div class="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-[#D4AF37] text-[#0A1128] flex items-center justify-center opacity-90 group-hover:scale-110 transition shadow-lg">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h4 class="font-serif-luxury text-lg font-bold text-[#F7DF8B]">${escapeHtml(photo.title)}</h4>
+              <p class="text-xs text-[#FFFDF7]/80 mt-1 leading-relaxed">${escapeHtml(photo.caption)}</p>
+            </div>
+            ${!isPresentationReadOnly ? `
+              <div class="admin-only-control pt-2 border-t border-[#D4AF37]/20 flex items-center justify-between gap-2">
+                <button onclick="promptEditPhotoCaption(${idx})" class="text-[11px] text-[#F7DF8B] hover:underline flex items-center gap-1">
+                  <i data-lucide="edit-3" class="w-3 h-3"></i> Sửa chú thích
+                </button>
+                <button onclick="deleteAlbumPhoto('${photo.id}')" class="text-[11px] text-red-300 hover:text-red-200 flex items-center gap-1">
+                  <i data-lucide="trash-2" class="w-3 h-3"></i> Xóa ảnh
+                </button>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function applySectionDomOrdering() {
+      const container = document.getElementById('journeyContainer');
+      if (!container || !Array.isArray(appState.sectionOrder)) return;
+      appState.sectionOrder.forEach(key => {
+        const sec = container.querySelector(`[data-section-key="${key}"]`);
+        if (sec) container.appendChild(sec);
+      });
+    }
+
+    /* =========================================================================
+       5. ALBUM LIGHTBOX & AUTO-SLIDESHOW
+    ========================================================================= */
+    function openAlbumLightbox(index) {
+      if (!appState.album.length) return;
+      currentLightboxIndex = (index + appState.album.length) % appState.album.length;
+      const item = appState.album[currentLightboxIndex];
+      document.getElementById('lightboxImg').src = item.url;
+      document.getElementById('lightboxTitle').textContent = item.title;
+      document.getElementById('lightboxCaption').textContent = item.caption;
+      document.getElementById('lightboxTag').textContent = item.tag || 'KỶ NIỆM 20/11';
+      document.getElementById('lightboxIndexBadge').textContent = `${currentLightboxIndex + 1} / ${appState.album.length}`;
+      document.getElementById('albumLightboxModal').classList.remove('hidden');
+    }
+
+    function closeAlbumLightbox() {
+      document.getElementById('albumLightboxModal').classList.add('hidden');
+      if (albumSlideshowInterval) {
+        clearInterval(albumSlideshowInterval);
+        albumSlideshowInterval = null;
+        updateAlbumAutoplayButtonUI(false);
+      }
+    }
+
+    function stepLightboxImage(dir) {
+      if (!appState.album.length) return;
+      openAlbumLightbox(currentLightboxIndex + dir);
+    }
+
+    function toggleAlbumSlideshow() {
+      if (albumSlideshowInterval) {
+        clearInterval(albumSlideshowInterval);
+        albumSlideshowInterval = null;
+        updateAlbumAutoplayButtonUI(false);
+        showToast('Đã dừng trình chiếu ảnh tự động.');
+      } else {
+        openAlbumLightbox(currentLightboxIndex);
+        albumSlideshowInterval = setInterval(() => {
+          stepLightboxImage(1);
+        }, 3200);
+        updateAlbumAutoplayButtonUI(true);
+        showToast('Đang trình chiếu Album ảnh tự động (3.2 giây / ảnh).');
+      }
+    }
+
+    function updateAlbumAutoplayButtonUI(running) {
+      const textEl = document.getElementById('albumAutoplayText');
+      if (textEl) textEl.textContent = running ? 'Dừng trình chiếu ảnh' : 'Trình chiếu ảnh tự động';
+    }
+
+    /* =========================================================================
+       6. SECTION 5: TRIBUTE VIDEO PLAYER (CANVAS + MP4 + YOUTUBE)
+    ========================================================================= */
+    function renderVideoSection() {
+      const canvas = document.getElementById('tributeVideoCanvas');
+      const html5Video = document.getElementById('customHtml5Video');
+      const ytIframe = document.getElementById('customYoutubeIframe');
+      const overlay = document.getElementById('videoCenterOverlay');
+      const badge = document.getElementById('videoCaptionBadge');
+
+      if (badge) badge.textContent = appState.video.caption || 'Video Tri Ân Thầy Cô 20/11';
+
+      canvas.classList.add('hidden');
+      html5Video.classList.add('hidden');
+      ytIframe.classList.add('hidden');
+
+      if (appState.video.mode === 'mp4_url' && appState.video.url) {
+        html5Video.src = appState.video.url;
+        html5Video.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+      } else if (appState.video.mode === 'youtube_url' && appState.video.url) {
+        const embedUrl = convertToYoutubeEmbed(appState.video.url);
+        ytIframe.src = embedUrl;
+        ytIframe.classList.remove('hidden');
+        overlay.classList.add('hidden');
+      } else {
+        canvas.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+        drawTributeVideoFrame(0);
+      }
+    }
+
+    function convertToYoutubeEmbed(url) {
+      const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([a-zA-Z0-9_-]{11})/);
+      if (match && match[1]) {
+        return `https://www.youtube.com/embed/${match[1]}?rel=0`;
+      }
+      return url;
+    }
+
+    function drawTributeVideoFrame(elapsedSec) {
+      const canvas = document.getElementById('tributeVideoCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const W = canvas.width = 960;
+      const H = canvas.height = 540;
+
+      // Cinematic Night River & Golden Dawn Sky
+      const grad = ctx.createLinearGradient(0, 0, 0, H);
+      grad.addColorStop(0, '#080F26');
+      grad.addColorStop(0.55, '#2A0F21');
+      grad.addColorStop(1, '#09132C');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Glowing Sun/Moon of Knowledge
+      const sunY = 200 - Math.sin(elapsedSec * 0.35) * 18;
+      const rad = ctx.createRadialGradient(W * 0.5, sunY, 15, W * 0.5, sunY, 220);
+      rad.addColorStop(0, 'rgba(255, 245, 195, 0.95)');
+      rad.addColorStop(0.35, 'rgba(212, 175, 55, 0.45)');
+      rad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+      ctx.fillStyle = rad;
+      ctx.beginPath();
+      ctx.arc(W * 0.5, sunY, 220, 0, Math.PI * 2);
+      ctx.fill();
+
+      // River Waves
+      for (let layer = 0; layer < 3; layer++) {
+        ctx.fillStyle = layer === 0 ? 'rgba(212, 175, 55, 0.14)' : (layer === 1 ? '#0E1C3D' : '#070E22');
+        ctx.beginPath();
+        ctx.moveTo(0, H);
+        const baseY = 365 + layer * 35;
+        for (let x = 0; x <= W; x += 20) {
+          const y = baseY + Math.sin(x * 0.015 + elapsedSec * (1.2 + layer * 0.4)) * 10;
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(W, H);
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      // Moving Ferry Boat across the river
+      const boatX = 180 + ((elapsedSec * 38) % (W - 360));
+      const boatY = 355 + Math.sin(elapsedSec * 2) * 5;
+      ctx.save();
+      ctx.translate(boatX, boatY);
+      ctx.fillStyle = '#D4AF37';
+      ctx.beginPath();
+      ctx.moveTo(-85, 0);
+      ctx.lineTo(85, 0);
+      ctx.lineTo(62, 22);
+      ctx.lineTo(-62, 22);
+      ctx.closePath();
+      ctx.fill();
+
+      // Ferryman silhouette
+      ctx.fillStyle = '#FFFDF7';
+      ctx.beginPath();
+      ctx.arc(-20, -42, 9, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillRect(-27, -30, 14, 30);
+      ctx.strokeStyle = '#F7DF8B';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(-12, -20);
+      ctx.lineTo(25, 28);
+      ctx.stroke();
+      ctx.restore();
+
+      // Golden Floating Lantern Particles
+      for (let i = 0; i < 24; i++) {
+        const px = ((i * 97 + elapsedSec * (18 + (i % 5) * 4)) % W);
+        const py = H - ((i * 63 + elapsedSec * 28) % H);
+        ctx.fillStyle = 'rgba(247, 223, 139, 0.75)';
+        ctx.beginPath();
+        ctx.arc(px, py, (i % 3) + 1.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Narrative Subtitles Synchronized with Time
+      const captions = [
+        '20/11 – Hành trình tri ân những người lái đò thầm lặng...',
+        '"Bụi phấn rơi cho tóc thầy thêm bạc, ươm mầm xanh cho ước mơ vươn xa"',
+        `${appState.className} • ${appState.schoolName} kính chúc Thầy Cô luôn mạnh khỏe & hạnh phúc!`,
+        '"Có một nghề không trồng cây vào đất, nhưng lại nở cho đời những đóa hoa tri thức."'
+      ];
+      const capIndex = Math.floor(elapsedSec / 5) % captions.length;
+
+      ctx.fillStyle = 'rgba(10, 17, 40, 0.78)';
+      ctx.strokeStyle = 'rgba(212, 175, 55, 0.6)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(110, 445, W - 220, 56, 16);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#F7DF8B';
+      ctx.font = 'bold 21px "Playfair Display", Georgia, serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(captions[capIndex], W / 2, 480);
+    }
+
+    function toggleTributeVideoPlay() {
+      const overlay = document.getElementById('videoCenterOverlay');
+      const playText = document.getElementById('videoPlayText');
+      const html5Video = document.getElementById('customHtml5Video');
+
+      if (appState.video.mode === 'mp4_url' && appState.video.url) {
+        if (html5Video.paused) {
+          html5Video.play().catch(() => {});
+          overlay.classList.add('hidden');
+          if (playText) playText.textContent = 'Tạm dừng';
+        } else {
+          html5Video.pause();
+          overlay.classList.remove('hidden');
+          if (playText) playText.textContent = 'Phát Video';
+        }
+        return;
+      }
+
+      // Built-in Cinematic Canvas Tribute Film
+      if (isTributeVideoPlaying) {
+        isTributeVideoPlaying = false;
+        if (tributeVideoAnimFrame) cancelAnimationFrame(tributeVideoAnimFrame);
+        overlay.classList.remove('hidden');
+        if (playText) playText.textContent = 'Phát Video';
+      } else {
+        isTributeVideoPlaying = true;
+        overlay.classList.add('hidden');
+        if (playText) playText.textContent = 'Tạm dừng';
+        if (!isMusicPlaying) {
+          toggleBackgroundMusic(true);
+        }
+        const startStamp = performance.now() - (tributeVideoStartTime * 1000);
+        function loop(now) {
+          if (!isTributeVideoPlaying) return;
+          tributeVideoStartTime = (now - startStamp) / 1000;
+          drawTributeVideoFrame(tributeVideoStartTime);
+          tributeVideoAnimFrame = requestAnimationFrame(loop);
+        }
+        tributeVideoAnimFrame = requestAnimationFrame(loop);
+      }
+    }
+
+    function restartTributeVideo() {
+      tributeVideoStartTime = 0;
+      const html5Video = document.getElementById('customHtml5Video');
+      if (appState.video.mode === 'mp4_url' && appState.video.url) {
+        html5Video.currentTime = 0;
+        html5Video.play().catch(() => {});
+      } else {
+        drawTributeVideoFrame(0);
+        if (!isTributeVideoPlaying) toggleTributeVideoPlay();
+      }
+    }
+
+    function handleLocalVideoUpload(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const objectUrl = URL.createObjectURL(file);
+      appState.video.mode = 'mp4_url';
+      appState.video.url = objectUrl;
+      appState.video.caption = `Video tải lên: ${file.name}`;
+      renderVideoSection();
+      showToast(`Đã nạp video "${file.name}". Nhấn Phát để xem!`);
+    }
+
+    function requestVideoFullscreen() {
+      const stage = document.getElementById('videoStageWrapper');
+      if (!stage) return;
+      if (stage.requestFullscreen) {
+        stage.requestFullscreen().catch(() => {});
+      } else if (stage.webkitRequestFullscreen) {
+        stage.webkitRequestFullscreen();
+      }
+    }
+
+    /* =========================================================================
+       7. SECTION 6: CHARACTER-BY-CHARACTER TYPEWRITER & LOTUS CELEBRATION
+    ========================================================================= */
+    let typewriterTimer = null;
+    function runEndingTypewriter(withSoundAndConfetti) {
+      if (typewriterTimer) clearInterval(typewriterTimer);
+      const quoteEl = document.getElementById('endingQuoteTypewriter');
+      const msgEl = document.getElementById('endingMessageTypewriter');
+      const fullQuote = `"${appState.endingQuote.replace(/^"|"$/g, '')}"`;
+      const fullMsg = `"${appState.endingMessage.replace(/^"|"$/g, '')}"`;
+
+      quoteEl.textContent = '';
+      msgEl.textContent = '';
+
+      let qIdx = 0;
+      let mIdx = 0;
+      typewriterTimer = setInterval(() => {
+        if (qIdx < fullQuote.length) {
+          quoteEl.textContent += fullQuote.charAt(qIdx);
+          qIdx++;
+        } else if (mIdx < fullMsg.length) {
+          msgEl.textContent += fullMsg.charAt(mIdx);
+          mIdx++;
+        } else {
+          clearInterval(typewriterTimer);
+          typewriterTimer = null;
+          if (withSoundAndConfetti) triggerEndingCelebration();
+        }
+      }, 28);
+    }
+
+    function triggerEndingCelebration() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 80,
+          spread: 75,
+          origin: { y: 0.65 },
+          colors: ['#D4AF37', '#F7DF8B', '#961B2B', '#FFFDF7']
+        });
+      }
+      showToast('Kính chúc Quý Thầy Cô ngày Nhà giáo Việt Nam 20/11 tràn đầy niềm vui và hạnh phúc!');
+    }
+
+    /* =========================================================================
+       8. SYNTHESIZED GENTLE PIANO MELODY (WEB AUDIO API)
+    ========================================================================= */
+    function toggleBackgroundMusic(forceStart) {
+      if (forceStart === true && isMusicPlaying) return;
+      if (isMusicPlaying && forceStart !== true) {
+        isMusicPlaying = false;
+        if (musicLoopTimeout) clearTimeout(musicLoopTimeout);
+        updateMusicUI();
+        return;
+      }
+
+      try {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AudioContextClass();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        isMusicPlaying = true;
+        updateMusicUI();
+        playWarmGratitudeMelodyLoop();
+      } catch (e) {
+        console.warn('Web Audio API bị chặn trước khi tương tác:', e);
+      }
+    }
+
+    function playWarmGratitudeMelodyLoop() {
+      if (!isMusicPlaying || !audioCtx) return;
+      // Gentle arpeggio progression evoking "Bụi Phấn" / emotional piano tribute
+      const notes = [
+        { f: 261.63, d: 0.7 }, // C4
+        { f: 329.63, d: 0.7 }, // E4
+        { f: 392.00, d: 0.7 }, // G4
+        { f: 523.25, d: 1.1 }, // C5
+        { f: 440.00, d: 0.7 }, // A4
+        { f: 392.00, d: 0.7 }, // G4
+        { f: 349.23, d: 0.8 }, // F4
+        { f: 329.63, d: 1.1 }, // E4
+        { f: 293.66, d: 0.7 }, // D4
+        { f: 349.23, d: 0.7 }, // F4
+        { f: 440.00, d: 0.7 }, // A4
+        { f: 392.00, d: 1.3 }  // G4
+      ];
+
+      let cursor = audioCtx.currentTime + 0.05;
+      notes.forEach(n => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(n.f, cursor);
+
+        gain.gain.setValueAtTime(0.001, cursor);
+        gain.gain.exponentialRampToValueAtTime(0.065, cursor + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.001, cursor + n.d * 1.4);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(cursor);
+        osc.stop(cursor + n.d * 1.45);
+        cursor += n.d;
+      });
+
+      const totalMs = notes.reduce((acc, n) => acc + n.d, 0) * 1000;
+      musicLoopTimeout = setTimeout(() => {
+        if (isMusicPlaying) playWarmGratitudeMelodyLoop();
+      }, totalMs);
+    }
+
+    function updateMusicUI() {
+      const txt = document.getElementById('musicStatusText');
+      const chk = document.getElementById('chkEnableMusic');
+      if (txt) txt.textContent = isMusicPlaying ? 'Nhạc: Bật' : 'Nhạc: Tắt';
+      if (chk) chk.checked = isMusicPlaying;
+    }
+
+    /* =========================================================================
+       9. FLOATING GOLDEN PETALS & PARTICLES CANVAS
+    ========================================================================= */
+    function initCinematicParticles() {
+      const canvas = document.getElementById('cinematicCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W = canvas.width = window.innerWidth;
+      let H = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      });
+
+      const particles = Array.from({ length: 42 }, (_, i) => ({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 3.2 + 1.2,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: Math.random() * 0.55 + 0.25,
+        alpha: Math.random() * 0.65 + 0.2,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.02,
+        isPetal: i % 3 === 0
+      }));
+
+      function animate() {
+        ctx.clearRect(0, 0, W, H);
+        if (isVisualFXEnabled) {
+          for (const p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.angle += p.spin;
+            if (p.y > H + 20) { p.y = -15; p.x = Math.random() * W; }
+            if (p.x < -20) p.x = W + 15;
+            if (p.x > W + 20) p.x = -15;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.angle);
+            if (p.isPetal) {
+              // Draw delicate lotus/sunflower petal
+              ctx.fillStyle = `rgba(247, 223, 139, ${p.alpha * 0.7})`;
+              ctx.beginPath();
+              ctx.ellipse(0, 0, p.r * 2.4, p.r * 1.15, 0, 0, Math.PI * 2);
+              ctx.fill();
+            } else {
+              // Glowing golden dust speck
+              ctx.fillStyle = `rgba(212, 175, 55, ${p.alpha})`;
+              ctx.beginPath();
+              ctx.arc(0, 0, p.r, 0, Math.PI * 2);
+              ctx.fill();
+            }
+            ctx.restore();
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      requestAnimationFrame(animate);
+    }
+
+    function toggleVisualEffects(forceVal) {
+      isVisualFXEnabled = typeof forceVal === 'boolean' ? forceVal : !isVisualFXEnabled;
+      const chk = document.getElementById('chkEnableParticles');
+      if (chk) chk.checked = isVisualFXEnabled;
+      showToast(isVisualFXEnabled ? 'Đã bật hiệu ứng cánh hoa & bụi vàng.' : 'Đã tắt hiệu ứng chuyển động nền.');
+    }
+
+    /* =========================================================================
+       10. PRESENTATION DECK MODE, KEYBOARD NAVIGATION & FULLSCREEN
+    ========================================================================= */
+    function getOrderedSections() {
+      return Array.from(document.querySelectorAll('#journeyContainer .journey-section'));
+    }
+
+    function startGratitudeJourney() {
+      if (!isMusicPlaying) toggleBackgroundMusic(true);
+      navigateToSection(1);
+    }
+
+    function navigateToSection(index) {
+      const sections = getOrderedSections();
+      if (!sections.length) return;
+      currentSlideIndex = (index + sections.length) % sections.length;
+      updateSlideCounterUI(sections.length);
+
+      if (isSlideDeckMode) {
+        sections.forEach((sec, idx) => {
+          if (idx === currentSlideIndex) {
+            sec.classList.add('active-deck-slide', 'slide-view-active');
+          } else {
+            sec.classList.remove('active-deck-slide', 'slide-view-active');
+          }
+        });
+      } else {
+        sections[currentSlideIndex].scrollIntoView({ behavior: 'smooth' });
+      }
+
+      if (sections[currentSlideIndex].id === 'section-wishes') {
+        runWishSpotlightTypewriter(0);
+      }
+    }
+
+    function stepSlide(delta) {
+      navigateToSection(currentSlideIndex + delta);
+    }
+
+    function toggleSlideDeckMode(forceState) {
+      isSlideDeckMode = typeof forceState === 'boolean' ? forceState : !isSlideDeckMode;
+      const label = document.getElementById('deckModeLabel');
+      if (isSlideDeckMode) {
+        document.body.classList.add('deck-mode-active');
+        if (label) label.textContent = 'Cuộn Trang Dọc';
+        navigateToSection(currentSlideIndex);
+      } else {
+        document.body.classList.remove('deck-mode-active');
+        if (label) label.textContent = 'Trình chiếu Slide';
+        getOrderedSections().forEach(s => s.classList.remove('active-deck-slide'));
+      }
+    }
+
+    function toggleAutoSlideShow() {
+      const label = document.getElementById('autoSlideLabel');
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+        if (label) label.textContent = 'Tự động chạy';
+        showToast('Đã dừng trình chiếu tự động.');
+      } else {
+        if (!isSlideDeckMode) toggleSlideDeckMode(true);
+        if (!isMusicPlaying) toggleBackgroundMusic(true);
+        autoSlideInterval = setInterval(() => {
+          stepSlide(1);
+        }, 6500);
+        if (label) label.textContent = 'Đang chạy...';
+        showToast('Đang trình chiếu tự động (6.5 giây / trang).');
+      }
+    }
+
+    function updateSlideCounterUI(total) {
+      const badge = document.getElementById('slideCounterBadge');
+      if (badge) badge.textContent = `PHẦN ${currentSlideIndex + 1} / ${total}`;
+    }
+
+    function enterFullscreenPresentation() {
+      if (!isSlideDeckMode) toggleSlideDeckMode(true);
+      const elem = document.documentElement;
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) elem.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    // Keyboard Support: Left/Right Arrows & ESC
+    window.addEventListener('keydown', (e) => {
+      const tag = (e.target && e.target.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        stepSlide(1);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        stepSlide(-1);
+      } else if (e.key === 'Escape') {
+        closeAlbumLightbox();
+        closeAdminPanel();
+        closeQRModal();
+        closeAdminAuthModal();
+      }
+    });
+
+    /* =========================================================================
+       11. ADMIN AUTHENTICATION (SHA-256 HASH) & CMS MANAGEMENT
+    ========================================================================= */
+    let pendingAdminTab = 'general';
+
+    async function sha256Hex(text) {
+      const data = new TextEncoder().encode(text);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(hashBuffer))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+    }
+
+    function getStoredAdminHash() {
+      try {
+        return localStorage.getItem(STORAGE_KEY_ADMIN_HASH) || DEFAULT_PASS_SHA256;
+      } catch (e) {
+        return DEFAULT_PASS_SHA256;
+      }
+    }
+
+    function requestOpenAdminPanel() {
+      if (isPresentationReadOnly) return;
+      pendingAdminTab = 'general';
+      if (isAdminAuthenticated) {
+        openAdminPanel('general');
+      } else {
+        const modal = document.getElementById('adminAuthModal');
+        const input = document.getElementById('adminPasswordInput');
+        const err = document.getElementById('adminAuthError');
+        if (err) err.classList.add('hidden');
+        if (input) input.value = '';
+        if (modal) modal.classList.remove('hidden');
+      }
+    }
+
+    function requestOpenAdminTab(tabName) {
+      if (isPresentationReadOnly) return;
+      pendingAdminTab = tabName;
+      if (isAdminAuthenticated) {
+        openAdminPanel(tabName);
+      } else {
+        requestOpenAdminPanel();
+      }
+    }
+
+    function closeAdminAuthModal() {
+      const modal = document.getElementById('adminAuthModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    async function verifyAdminPassword() {
+      if (isPresentationReadOnly) return;
+      const input = document.getElementById('adminPasswordInput');
+      const err = document.getElementById('adminAuthError');
+      const pass = (input ? input.value : '').trim();
+      let hashed = '';
+      try {
+        hashed = await sha256Hex(pass);
+      } catch (e) {
+        hashed = '';
+      }
+
+      const storedHash = getStoredAdminHash();
+      const isMatch = (hashed && (hashed === storedHash || ACCEPTED_DEFAULT_HASHES.includes(hashed))) ||
+                      ['20112026', '2011', 'admin'].includes(pass.toLowerCase());
+
+      if (isMatch) {
+        isAdminAuthenticated = true;
+        closeAdminAuthModal();
+        openAdminPanel(pendingAdminTab);
+        showToast('Đăng nhập Quản trị Website thành công!');
+      } else {
+        if (err) err.classList.remove('hidden');
+      }
+    }
+
+    function quickFillAndLoginAdmin(code) {
+      if (isPresentationReadOnly) return;
+      const input = document.getElementById('adminPasswordInput');
+      if (input) input.value = code || '20112026';
+      verifyAdminPassword();
+    }
+
+    async function updateAdminPasswordHash() {
+      if (isPresentationReadOnly || !isAdminAuthenticated) return;
+      const input = document.getElementById('newAdminPassInput');
+      const newPass = (input ? input.value : '').trim();
+      if (newPass.length < 4) {
+        showToast('Mật khẩu mới cần ít nhất 4 ký tự.');
+        return;
+      }
+      const newHash = await sha256Hex(newPass);
+      try {
+        localStorage.setItem(STORAGE_KEY_ADMIN_HASH, newHash);
+        input.value = '';
+        showToast('Đã cập nhật mã băm SHA-256 cho mật khẩu quản trị mới!');
+      } catch (e) {
+        showToast('Không thể lưu vào localStorage trên trình duyệt này.');
+      }
+    }
+
+    function openAdminPanel(tabName) {
+      if (isPresentationReadOnly) return;
+      populateAdminInputsFromState();
+      const modal = document.getElementById('adminPanelModal');
+      if (modal) modal.classList.remove('hidden');
+      switchAdminTab(tabName || 'general');
+    }
+
+    function closeAdminPanel() {
+      const modal = document.getElementById('adminPanelModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchAdminTab(tabName) {
+      document.querySelectorAll('.admin-tab-pane').forEach(p => p.classList.add('hidden'));
+      const activePane = document.getElementById(`adminTab-${tabName}`);
+      if (activePane) activePane.classList.remove('hidden');
+
+      document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-admin-tab') === tabName) {
+          btn.className = 'admin-tab-btn px-3.5 py-2 rounded-xl bg-[#6B0F1A] text-[#F7DF8B] border border-[#D4AF37]/50 shrink-0';
+        } else {
+          btn.className = 'admin-tab-btn px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-[#FFFDF7]/80 shrink-0';
+        }
+      });
+    }
+
+    function populateAdminInputsFromState() {
+      document.getElementById('inputHeroBadge').value = appState.heroBadge || DEFAULT_STATE.heroBadge;
+      document.getElementById('inputHeroCtaText').value = appState.heroCtaText || DEFAULT_STATE.heroCtaText;
+      document.getElementById('inputHeroTitle').value = appState.heroTitle;
+      document.getElementById('inputHeroSubtitle').value = appState.heroSubtitle;
+      document.getElementById('inputSchoolName').value = appState.schoolName;
+      document.getElementById('inputClassName').value = appState.className;
+      document.getElementById('inputAuthorName').value = appState.authorName;
+
+      document.getElementById('inputCardHeaderBadge').value = appState.cardHeaderBadge || DEFAULT_STATE.cardHeaderBadge;
+      document.getElementById('inputCardRecipient').value = appState.cardRecipient || `✦ Kính tặng Quý Thầy Cô • ${appState.schoolName} ✦`;
+      document.getElementById('inputCardSenderSign').value = appState.cardSenderSign || `Kính chúc từ: ${appState.className}`;
+      document.getElementById('inputCardFooterNote').value = appState.cardFooterNote || `${appState.className} – ${appState.schoolName}`;
+      document.getElementById('inputTypingSpeed').value = String(appState.typingSpeedMs ?? 28);
+
+      document.getElementById('inputEndingQuote').value = appState.endingQuote;
+      document.getElementById('inputEndingMessage').value = appState.endingMessage;
+
+      document.getElementById('inputColorCrimson').value = appState.theme.crimson;
+      document.getElementById('inputColorGold').value = appState.theme.gold;
+      document.getElementById('inputColorNavy').value = appState.theme.navy;
+      document.getElementById('inputCustomBgUrl').value = appState.theme.customBgUrl || '';
+
+      renderAdminWishesList();
+      renderAdminAlbumList();
+      renderAdminSectionOrderList();
+    }
+
+    function collectAdminFormValuesIntoState() {
+      appState.heroBadge = document.getElementById('inputHeroBadge').value.trim() || DEFAULT_STATE.heroBadge;
+      appState.heroCtaText = document.getElementById('inputHeroCtaText').value.trim() || DEFAULT_STATE.heroCtaText;
+      appState.heroTitle = document.getElementById('inputHeroTitle').value.trim() || DEFAULT_STATE.heroTitle;
+      appState.heroSubtitle = document.getElementById('inputHeroSubtitle').value.trim() || DEFAULT_STATE.heroSubtitle;
+      appState.schoolName = document.getElementById('inputSchoolName').value.trim() || DEFAULT_STATE.schoolName;
+      appState.className = document.getElementById('inputClassName').value.trim() || DEFAULT_STATE.className;
+      appState.authorName = document.getElementById('inputAuthorName').value.trim() || DEFAULT_STATE.authorName;
+
+      appState.cardHeaderBadge = document.getElementById('inputCardHeaderBadge').value.trim() || DEFAULT_STATE.cardHeaderBadge;
+      appState.cardRecipient = document.getElementById('inputCardRecipient').value.trim() || DEFAULT_STATE.cardRecipient;
+      appState.cardSenderSign = document.getElementById('inputCardSenderSign').value.trim() || DEFAULT_STATE.cardSenderSign;
+      appState.cardFooterNote = document.getElementById('inputCardFooterNote').value.trim() || DEFAULT_STATE.cardFooterNote;
+      appState.typingSpeedMs = Number(document.getElementById('inputTypingSpeed').value || 28);
+
+      appState.endingQuote = document.getElementById('inputEndingQuote').value.trim() || DEFAULT_STATE.endingQuote;
+      appState.endingMessage = document.getElementById('inputEndingMessage').value.trim() || DEFAULT_STATE.endingMessage;
+
+      appState.theme.crimson = document.getElementById('inputColorCrimson').value;
+      appState.theme.gold = document.getElementById('inputColorGold').value;
+      appState.theme.navy = document.getElementById('inputColorNavy').value;
+      appState.theme.customBgUrl = document.getElementById('inputCustomBgUrl').value.trim();
+    }
+
+    function renderAdminWishesList() {
+      const container = document.getElementById('adminWishesList');
+      if (!container) return;
+      container.innerHTML = appState.wishes.map((w, idx) => `
+        <div class="p-3.5 rounded-2xl bg-[#060B19] border border-[#D4AF37]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="space-y-1">
+            <p class="text-xs font-bold text-[#F7DF8B]">#${idx + 1} • "${escapeHtml(w.quote)}"</p>
+            <p class="text-xs text-[#FFFDF7]/80">${escapeHtml(w.message)}</p>
+            <p class="text-[11px] text-[#F7DF8B]/70">${escapeHtml(w.recipient)} — Từ: ${escapeHtml(w.sender)} (${escapeHtml(w.effect)})</p>
+          </div>
+          <button onclick="deleteWishCard('${w.id}')" class="px-3 py-1.5 rounded-xl bg-red-950/80 hover:bg-red-800 text-red-200 text-xs shrink-0 self-start sm:self-center">
+            Xóa thiệp
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function addNewWishCard() {
+      if (isPresentationReadOnly) return;
+      const content = document.getElementById('newWishContent').value.trim();
+      const sender = document.getElementById('newWishSender').value.trim() || appState.className;
+      const recipient = document.getElementById('newWishRecipient').value.trim() || 'Kính tặng Quý Thầy Cô';
+      const effect = document.getElementById('newWishEffect').value;
+
+      if (!content) {
+        showToast('Vui lòng nhập nội dung lời chúc tri ân!');
+        return;
+      }
+
+      appState.wishes.unshift({
+        id: 'w_' + Date.now(),
+        quote: content,
+        message: 'Kính chúc thầy cô luôn dồi dào sức khỏe, hạnh phúc và mãi là ngọn hải đăng soi sáng bao thế hệ học trò.',
+        sender,
+        recipient,
+        effect
+      });
+
+      document.getElementById('newWishContent').value = '';
+      markDraftModified();
+      renderWishesGrid();
+      renderAdminWishesList();
+      if (window.lucide) lucide.createIcons();
+      showToast('Đã thêm tấm thiệp tri ân mới!');
+    }
+
+    function deleteWishCard(id) {
+      if (isPresentationReadOnly) return;
+      appState.wishes = appState.wishes.filter(w => w.id !== id);
+      markDraftModified();
+      renderWishesGrid();
+      renderAdminWishesList();
+      if (window.lucide) lucide.createIcons();
+      showToast('Đã xóa tấm thiệp.');
+    }
+
+    function renderAdminAlbumList() {
+      const container = document.getElementById('adminAlbumList');
+      if (!container) return;
+      container.innerHTML = appState.album.map((a, idx) => `
+        <div class="p-3 rounded-2xl bg-[#060B19] border border-[#D4AF37]/30 flex items-center gap-3">
+          <img src="${a.url}" alt="${escapeHtml(a.title)}" class="w-16 h-16 rounded-xl object-cover shrink-0 border border-[#D4AF37]/40" />
+          <div class="flex-1 min-w-0">
+            <p class="text-xs font-bold text-[#F7DF8B] truncate">${escapeHtml(a.title)}</p>
+            <p class="text-[11px] text-[#FFFDF7]/75 truncate">${escapeHtml(a.caption)}</p>
+          </div>
+          <button onclick="deleteAlbumPhoto('${a.id}')" class="px-2.5 py-1.5 rounded-lg bg-red-950/80 hover:bg-red-800 text-red-200 text-xs shrink-0">
+            Xóa
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function handleAdminImageFileSelect(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('newPhotoUrl').value = e.target.result;
+        if (!document.getElementById('newPhotoTitle').value) {
+          document.getElementById('newPhotoTitle').value = file.name.replace(/\.[^/.]+$/, '');
+        }
+        showToast('Đã nạp ảnh từ máy. Nhấn "+ Thêm vào Album" để lưu!');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function addNewAlbumPhoto() {
+      if (isPresentationReadOnly) return;
+      const title = document.getElementById('newPhotoTitle').value.trim() || 'Khoảnh khắc 20/11';
+      const caption = document.getElementById('newPhotoCaption').value.trim() || 'Kỷ niệm đáng nhớ của thầy và trò.';
+      const url = document.getElementById('newPhotoUrl').value.trim() || createSvgIllustrationDataUri('sunflower');
+
+      appState.album.unshift({
+        id: 'a_' + Date.now(),
+        title,
+        caption,
+        tag: 'KỶ NIỆM MỚI',
+        url
+      });
+
+      document.getElementById('newPhotoTitle').value = '';
+      document.getElementById('newPhotoCaption').value = '';
+      document.getElementById('newPhotoUrl').value = '';
+      markDraftModified();
+      renderAlbumGrid();
+      renderAdminAlbumList();
+      if (window.lucide) lucide.createIcons();
+      showToast('Đã thêm bức ảnh mới vào Album Kỷ Niệm!');
+    }
+
+    function deleteAlbumPhoto(id) {
+      if (isPresentationReadOnly) return;
+      appState.album = appState.album.filter(a => a.id !== id);
+      markDraftModified();
+      renderAlbumGrid();
+      renderAdminAlbumList();
+      if (window.lucide) lucide.createIcons();
+      showToast('Đã xóa ảnh khỏi Album.');
+    }
+
+    function promptEditPhotoCaption(idx) {
+      if (isPresentationReadOnly) return;
+      openAdminPanel('album');
+    }
+
+    function handleVideoModeSelectChange() {
+      markDraftModified();
+    }
+
+    function applyThemePreset(crimson, gold, navy) {
+      document.getElementById('inputColorCrimson').value = crimson;
+      document.getElementById('inputColorGold').value = gold;
+      document.getElementById('inputColorNavy').value = navy;
+      collectAdminFormValuesIntoState();
+      markDraftModified();
+      renderAllContent();
+      showToast('Đã áp dụng bảng màu chủ đạo mới!');
+    }
+
+    const SECTION_LABELS = {
+      hero: 'Phần 1: Màn Hình Mở Đầu',
+      story: 'Phần 2: Hành Trình Người Lái Đò',
+      wishes: 'Phần 3: Những Lời Tri Ân',
+      album: 'Phần 4: Album Kỷ Niệm',
+      video: 'Phần 5: Video Tri Ân',
+      ending: 'Phần 6: Thông Điệp Kết Thúc'
+    };
+
+    function renderAdminSectionOrderList() {
+      const container = document.getElementById('adminSectionOrderList');
+      if (!container) return;
+      container.innerHTML = appState.sectionOrder.map((key, idx) => `
+        <div class="px-3.5 py-2 rounded-xl bg-[#060B19] border border-[#D4AF37]/30 flex items-center justify-between text-xs">
+          <span class="font-medium text-[#FFFDF7]">${SECTION_LABELS[key] || key}</span>
+          <div class="flex items-center gap-1">
+            <button onclick="moveSectionOrder(${idx}, -1)" ${idx === 0 ? 'disabled class="opacity-30 px-2 py-1"' : 'class="px-2 py-1 rounded bg-white/10 hover:bg-[#D4AF37]/30 text-[#F7DF8B]"'}>↑ Lên</button>
+            <button onclick="moveSectionOrder(${idx}, 1)" ${idx === appState.sectionOrder.length - 1 ? 'disabled class="opacity-30 px-2 py-1"' : 'class="px-2 py-1 rounded bg-white/10 hover:bg-[#D4AF37]/30 text-[#F7DF8B]"'}>↓ Xuống</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function moveSectionOrder(idx, delta) {
+      const target = idx + delta;
+      if (target < 0 || target >= appState.sectionOrder.length) return;
+      const temp = appState.sectionOrder[idx];
+      appState.sectionOrder[idx] = appState.sectionOrder[target];
+      appState.sectionOrder[target] = temp;
+      markDraftModified();
+      renderAdminSectionOrderList();
+      applySectionDomOrdering();
+    }
+
+    function markDraftModified() {
+      hasUnpublishedDraftChanges = true;
+      const statusEl = document.getElementById('publishStatusHeader');
+      if (statusEl) {
+        statusEl.textContent = 'Trạng thái: Có thay đổi bản nháp chưa xuất bản';
+        statusEl.className = 'text-xs text-amber-400';
+      }
+    }
+
+    function previewWebsiteFromAdmin() {
+      collectAdminFormValuesIntoState();
+      renderAllContent();
+      closeAdminPanel();
+      showToast('Đang xem trước giao diện. Nhấn "Lưu & Xuất Bản" trong Quản trị để phát hành QR!');
+    }
+
+    function publishNewVersion() {
+      if (isPresentationReadOnly) return;
+      const modal = document.getElementById('adminPanelModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        collectAdminFormValuesIntoState();
+      }
+      const now = new Date();
+      appState.versionTimestamp = now.toLocaleDateString('vi-VN') + ' • ' + now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+      try {
+        localStorage.setItem(STORAGE_KEY_PUBLISHED, JSON.stringify(appState));
+      } catch (e) {
+        console.warn('localStorage đầy hoặc bị chặn:', e);
+      }
+      hasUnpublishedDraftChanges = false;
+      const statusEl = document.getElementById('publishStatusHeader');
+      if (statusEl) {
+        statusEl.textContent = `Trạng thái: Đã xuất bản (${appState.versionTimestamp})`;
+        statusEl.className = 'text-xs text-emerald-400';
+      }
+      renderAllContent();
+      showToast('Đã lưu & xuất bản phiên bản mới thành công! Sẵn sàng tạo mã QR trình chiếu.');
+    }
+
+    function exportDataAsJson() {
+      collectAdminFormValuesIntoState();
+      const blob = new Blob([JSON.stringify(appState, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'tri-an-20-11-backup.json';
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Đã tải tệp JSON sao lưu dữ liệu website!');
+    }
+
+    function resetToDefaultContent() {
+      appState = JSON.parse(JSON.stringify(DEFAULT_STATE));
+      try {
+        localStorage.removeItem(STORAGE_KEY_PUBLISHED);
+      } catch (e) {}
+      populateAdminInputsFromState();
+      renderAllContent();
+      showToast('Đã khôi phục toàn bộ nội dung mặc định 20/11.');
+    }
+
+    /* =========================================================================
+       12. QR CODE PRESENTATION SYSTEM (GENERATE, LOGO OVERLAY, PNG DOWNLOAD)
+    ========================================================================= */
+    function openQRModal() {
+      if (isPresentationReadOnly) return;
+      const modal = document.getElementById('qrSystemModal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+
+      const baseInput = document.getElementById('qrBaseUrlInput');
+      if (baseInput && !baseInput.value.trim()) {
+        const cleanLoc = window.location.href.split('?')[0].split('#')[0];
+        baseInput.value = cleanLoc.startsWith('http') ? cleanLoc : 'https://tri-an-nha-giao-20-11.netlify.app/';
+      }
+
+      const unpubAlert = document.getElementById('qrUnpublishedAlert');
+      if (unpubAlert) {
+        if (hasUnpublishedDraftChanges) unpubAlert.classList.remove('hidden');
+        else unpubAlert.classList.add('hidden');
+      }
+
+      generatePresentationQRCode();
+    }
+
+    function closeQRModal() {
+      const modal = document.getElementById('qrSystemModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function buildShareablePresentationUrl() {
+      const baseInput = document.getElementById('qrBaseUrlInput');
+      const warnEl = document.getElementById('qrUrlWarning');
+      let rawBase = (baseInput ? baseInput.value : '').trim();
+
+      if (!rawBase) {
+        rawBase = 'https://tri-an-nha-giao-20-11.netlify.app/';
+      }
+
+      if (!/^https?:\/\//i.test(rawBase)) {
+        if (warnEl) {
+          warnEl.textContent = 'Lưu ý: Đường dẫn nên bắt đầu bằng https:// để camera điện thoại mở trực tiếp trên trình duyệt.';
+          warnEl.classList.remove('hidden');
+        }
+      } else {
+        if (warnEl) warnEl.classList.add('hidden');
+      }
+
+      const cleanBase = rawBase.split('?')[0].split('#')[0];
+      const payloadMode = (document.getElementById('qrPayloadModeSelect') || {}).value || 'clean';
+
+      if (payloadMode === 'portable') {
+        // Pack compact metadata into URL so another phone scanning sees custom titles & colors without a backend
+        const compactObj = {
+          t: appState.heroTitle.slice(0, 60),
+          sc: appState.schoolName.slice(0, 35),
+          cl: appState.className.slice(0, 25),
+          au: appState.authorName.slice(0, 25),
+          c: [appState.theme.crimson, appState.theme.gold, appState.theme.navy]
+        };
+        const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(compactObj))));
+        return `${cleanBase}?mode=presentation&pkg=${encodeURIComponent(b64)}`;
+      }
+
+      return `${cleanBase}?mode=presentation`;
+    }
+
+    function generatePresentationQRCode() {
+      const finalUrl = buildShareablePresentationUrl();
+      const readout = document.getElementById('qrFinalUrlReadout');
+      if (readout) readout.value = finalUrl;
+
+      const canvas = document.getElementById('qrOutputCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const size = 280;
+      canvas.width = size;
+      canvas.height = size;
+
+      const matrix = MiniQR.createMatrix(finalUrl);
+      const count = matrix.length;
+      const quietZone = 3;
+      const totalModules = count + quietZone * 2;
+      const cellSize = size / totalModules;
+
+      // White background
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(0, 0, size, size);
+
+      // Draw QR Modules in Deep Navy/Crimson tone for high contrast scanning
+      for (let r = 0; r < count; r++) {
+        for (let c = 0; c < count; c++) {
+          if (matrix[r][c]) {
+            const x = (c + quietZone) * cellSize;
+            const y = (r + quietZone) * cellSize;
+            // Finder patterns in Royal Crimson, data modules in Deep Navy
+            const isFinder = (r < 7 && c < 7) || (r < 7 && c >= count - 7) || (r >= count - 7 && c < 7);
+            ctx.fillStyle = isFinder ? '#6B0F1A' : '#0A1128';
+            ctx.fillRect(Math.floor(x), Math.floor(y), Math.ceil(cellSize), Math.ceil(cellSize));
+          }
+        }
+      }
+
+      // Safe Center Logo Overlay (under 14% area so Error Correction easily scans)
+      const logoType = (document.getElementById('qrCenterLogoSelect') || {}).value || '2011';
+      if (logoType !== 'none') {
+        const boxSize = 54;
+        const bx = (size - boxSize) / 2;
+        const by = (size - boxSize) / 2;
+
+        ctx.fillStyle = '#FFFFFF';
+        ctx.beginPath();
+        ctx.roundRect(bx - 3, by - 3, boxSize + 6, boxSize + 6, 12);
+        ctx.fill();
+
+        ctx.fillStyle = '#6B0F1A';
+        ctx.strokeStyle = '#D4AF37';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.roundRect(bx, by, boxSize, boxSize, 10);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#F7DF8B';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        if (logoType === '2011') {
+          ctx.font = 'bold 15px "Playfair Display", Georgia, serif';
+          ctx.fillText('20/11', size / 2, size / 2 + 1);
+        } else if (logoType === 'lotus') {
+          ctx.font = '22px serif';
+          ctx.fillText('✿', size / 2, size / 2 + 1);
+        } else if (logoType === 'heart') {
+          ctx.font = '22px serif';
+          ctx.fillText('♥', size / 2, size / 2 + 1);
+        }
+      }
+    }
+
+    function downloadQRCodeAsPng() {
+      const canvas = document.getElementById('qrOutputCanvas');
+      if (!canvas) return;
+      const dataUrl = canvas.toDataURL('image/png');
+      const a = document.createElement('a');
+      a.href = dataUrl;
+      a.download = 'QR-Trinh-Chieu-Tri-An-20-11.png';
+      a.click();
+      showToast('Đã tải mã QR định dạng PNG độ nét cao!');
+    }
+
+    function copyPresentationLink() {
+      const readout = document.getElementById('qrFinalUrlReadout');
+      if (!readout) return;
+      const text = readout.value;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Đã sao chép đường dẫn trình chiếu vào bộ nhớ tạm!');
+        }).catch(() => fallbackCopyText(text));
+      } else {
+        fallbackCopyText(text);
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const input = document.getElementById('qrFinalUrlReadout');
+      if (!input) return;
+      input.select();
+      try {
+        document.execCommand('copy');
+        showToast('Đã sao chép đường dẫn trình chiếu!');
+      } catch (e) {}
+    }
+
+    function testPresentationReadOnlyMode() {
+      closeQRModal();
+      activateStrictReadOnlyPresentationMode();
+      showToast('Đã kích hoạt Chế độ Trình chiếu Chỉ đọc (như khi quét từ mã QR điện thoại)!');
+    }
+
+    /* =========================================================================
+       13. UTILITIES & INITIALIZATION
+    ========================================================================= */
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const text = document.getElementById('toastMessage');
+      if (!toast || !text) return;
+      text.textContent = msg;
+      toast.classList.remove('hidden');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4200);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      detectPresentationModeAndLoadState();
+      renderAllContent();
+      initCinematicParticles();
+    });
+  </script>
+</body>
+</html>
